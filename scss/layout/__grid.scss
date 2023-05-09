@@ -1,0 +1,204 @@
+/*
+    Mai UI Grid System
+    ==========================================================================
+    - Container 🆗
+    - Rows 🆗
+    - Columns 🆗
+    - Offsets 🆗
+    - Column Ordering 🆗
+    - Nesting 🆗
+    - Grid Variables 🆗
+    - Grid Mixins 🆗
+
+    developed by @yasinldev
+*/
+
+// Create a wrapper for .container
+@mixin min($bp, $max: "null", $device: "screen") {
+    @if $max == "null" {
+        @media only #{$device} and (min-width: #{$bp}) {
+            @content;
+        }
+    } @else {
+        @media only #{$device} and (min-width: #{$bp}) and (max-width: #{$max}) {
+            @content;
+        }
+    }
+}
+
+@function bp($bp) {
+    @return map-get($container-breakpoints, $bp);
+}
+
+$container-breakpoints: (
+        na: 0px,
+    // For BS grid
+        xs: 320px,
+    // Smartphone
+        sm: 600px,
+    // Tablets
+        md: 900px,
+    // Tablets Landscape and small desktops
+        lg: 1200px,
+    // Desktops
+        xl: 1800px,
+    // Large Desktop
+);
+
+@function container($container-size, $true-val: false) {
+    @return map-get($container-sizes, $container-size);
+}
+
+$container-sizes: (
+        sm: map-get($container-breakpoints, sm) - 30px,
+        md: map-get($container-breakpoints, md) - 40px,
+        lg: map-get($container-breakpoints, lg) - 50px,
+        xl: map-get($container-breakpoints, xl) - 400px
+);
+
+.mai-container {
+    padding-right: 1rem;
+    padding-left: 1rem;
+
+    &:not(.is-fluid) {
+        margin: 0 auto;
+
+        @each $bp, $container-size in $container-sizes {
+            @include min(#{bp(#{$bp})}) {
+                width: 100%;
+                max-width: container(#{$bp});
+            }
+        }
+    }
+}
+
+@each $bp, $container-size in $container-sizes {
+    .mai-container-#{$bp} {
+        margin: 0 auto;
+        padding-right: 1rem;
+        padding-left: 1rem;
+        width: 100%;
+
+        $i: index($container-sizes, $bp $container-size);
+
+        @for $j from $i through length($container-sizes) {
+            @include min(#{bp(nth(nth($container-sizes, $j), 1))}) {
+                max-width: container(#{nth(nth($container-sizes, $j), 1)});
+            }
+        }
+    }
+}
+
+// Row
+
+$mai-columns: 12 !default;
+$mai-gutter: 0.5rem !default;
+
+$mai-class-row: 'mai-row' !default;
+$mai-class-column: 'column' !default;
+$mai-class-offset: 'offset' !default;
+
+$row-breakpoints: (
+        na: 0px,
+        xs: 320px,
+        sm: 600px,
+        md: 900px,
+        lg: 1200px,
+        xl: 1800px,
+);
+
+@function get-column-percent($total-columns){
+    @return calc($total-columns / $mai-columns * 100%);
+}
+
+@mixin spacing($value, $type: margin, $orient: vertical){
+    @if $orient == vertical {
+        #{$type}-top: $value;
+        #{$type}-bottom: $value;
+    }
+    @else {
+        #{$type}-left: $value;
+        #{$type}-right: $value;
+    }
+}
+
+.#{$mai-class-row}{
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+    @include spacing(($mai-gutter), margin, hortizontal);
+}
+
+%#{$mai-class-column}{
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 0;
+    flex-shrink: 0;
+    min-height: 1px;
+
+    @include spacing(($mai-gutter), padding, hortizontal);
+}
+
+%#{$mai-class-column}-flex{
+    @extend %#{$mai-class-column};
+    flex-grow: 1;
+    flex-basis: 0;
+    max-width: 100%;
+}
+
+@mixin grid-base($namespace) {
+    .#{$mai-class-column}-#{$namespace} {
+        @extend %#{$mai-class-column}-flex;
+    }
+
+    @for $i from 1 through $mai-columns {
+        .#{$mai-class-column}-#{$namespace}-#{$i} {
+            @extend %#{$mai-class-column};
+        }
+    }
+}
+
+@mixin grid-sizes($namespace) {
+    @for $i from 1 through $mai-columns {
+        .#{$mai-class-column}-#{$namespace}-#{$i} {
+            flex-basis: get-column-percent($i);
+            max-width: get-column-percent($i);
+        }
+    }
+
+    @for $i from 1 through $mai-columns {
+        @if($i != $mai-columns){
+            .#{$mai-class-offset}-#{$namespace}-#{$i} {
+                margin-left: get-column-percent($i);
+            }
+        }
+    }
+
+    .#{$mai-class-offset}-#{$namespace}-reset{
+        margin-left: 0;
+    }
+}
+
+@each $values in $row-breakpoints{
+    $namespace: nth($values, 1);
+    @include grid-base($namespace);
+}
+
+@each $values in $row-breakpoints{
+    @if length($values) == 1 {
+        $namespace: nth($values, 1);
+        @include grid-sizes($namespace);
+    }
+    @else {
+        $namespace: nth($values, 1);
+        $size: nth($values, 2);
+
+        @media only screen and (min-width: #{$size}){
+            @include grid-sizes($namespace);
+        }
+    }
+}
+
