@@ -1,0 +1,115 @@
+/*
+  Mixins
+  ==========================================================================
+  - Main Colors
+  - Text Colors
+  - Background Colors
+  - Border Colors
+  - Link Colors
+  - Button Colors
+  - Form Colors
+  - Font Family's
+  - Text Styles
+  - Text Sizes and Paddings
+  - Links
+  - List Styles
+
+  developed by @yasinldev
+*/
+
+
+// Main Colors
+$primary-color: #1890ff;
+$secondary-color: #2f54eb;
+$success-color: #52c41a;
+$info-color: #1890ff;
+$warning-color: #faad14;
+$error-color: #f5222d;
+
+// Text Colors
+$heading-color: #333;
+$text-color-base: #333;
+$text-color-secondary: #999;
+$disabled-color: #ccc;
+$hr-color: #e8e8e8;
+
+// Background Colors
+$body-background-color: #fff;
+$component-background-color: #f7f7f7;
+$disabled-background-color: #f5f5f5;
+
+// Border Colors
+$border-color-base: #dedede;
+$border-color-split: #e8e8e8;
+
+// Link Colors
+$link-color: $primary-color;
+$link-hover-color: darken($link-color, 60%);
+
+// Button Colors
+$btn-primary-bg: $primary-color;
+$btn-primary-color: #fff;
+$btn-danger-bg: $error-color;
+$btn-danger-color: #fff;
+
+// Form Colors
+$input-border-color: $border-color-base;
+$input-hover-border-color: $primary-color;
+$input-focus-border-color: $primary-color;
+$input-disabled-bg: $disabled-background-color;
+$input-disabled-color: $text-color-secondary;
+$label-color: $heading-color;
+$select-border-color: $border-color-base;
+
+
+// defining Font Family's
+// -_-_-_-_-_-_-_-_-_-_-_--->
+
+$font-family-sans-serif: -apple-system, BlinkMacSystemFont, "Segoe UI",
+Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+
+$font-family-heading: "Montserrat", sans-serif;
+$font-family-base: "Open Sans", sans-serif;
+$font-family-mono: "Roboto Mono", monospace;
+
+
+// defining Text Styles
+// -_-_-_-_-_-_-_-_-_-_-_--->
+
+$font-weight-light: 300;
+$font-weight-normal: 400;
+$font-weight-bold: 600;
+
+
+// defining Text Sizes and Paddings
+// -_-_-_-_-_-_-_-_-_-_-_--->
+
+$font-size-base: 14px;
+$font-size-lg: $font-size-base + 2px;
+$font-size-sm: $font-size-base - 2px;
+
+$line-height-base: 1.5;
+$line-height-computed: $font-size-base * $line-height-base;
+
+$padding-lg: 24px;
+$padding-md: 16px;
+$padding-sm: 12px;
+$padding-xs: 8px;
+
+$margin-lg: 24px;
+$margin-md: 16px;
+$margin-sm: 12px;
+$margin-xs: 8px;
+
+// Links
+// -_-_-_-_-_-_-_-_-_-_-_--->
+
+$link-decoration: none;
+$link-hover-decoration: pointer;
+
+// defining list styles
+// -_-_-_-_-_-_-_-_-_-_-_--->
+
+$list-style: none;
+$list-style-position: inside;
+$list-style-type: disc;
