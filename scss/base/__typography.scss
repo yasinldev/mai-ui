@@ -1,0 +1,258 @@
+// Mai UI Typography
+// Developed by: @yasinldev
+
+/*
+  "__typography.scss" is an SCSS file typically used to manage typography styles in a project.
+  This file makes it easy to specify typography styles such as font family, size, color, and other style properties.
+*/
+
+// defining colors shame
+// -_-_-_-_-_-_-_-_-_-_-_--->
+
+@import "./../functions/scss_helpers.scss"; // importing scss_helpers.scss file
+@import "./__mixins.scss"; // importing __mixins.scss file
+
+h1 {
+  font-size: rem(40px);
+  font-weight: $font-weight-bold;
+  line-height: $line-height-computed;
+  margin-bottom: $margin-md;
+  font-family: $font-family-sans-serif;
+
+  @media screen and (max-width: 768px) {
+    font-size: rem(36px);
+  }
+}
+
+h2{
+  font-size: rem(36px);
+  font-weight: $font-weight-bold;
+  line-height: $line-height-computed;
+  margin-bottom: $margin-md;
+  font-family: $font-family-sans-serif;
+
+  @media screen and (max-width: 768px){
+    font-size: rem(32px);
+  }
+}
+
+h3{
+  font-size: rem(32px);
+  font-weight: $font-weight-bold;
+  line-height: $line-height-computed;
+  margin-bottom: $margin-md;
+  font-family: $font-family-sans-serif;
+
+  @media screen and (max-width: 768px){
+    font-size: rem(28px);
+  }
+}
+
+h4{
+  font-size: rem(28px);
+  font-weight: $font-weight-bold;
+  line-height: $line-height-computed;
+  margin-bottom: $margin-md;
+  font-family: $font-family-sans-serif;
+
+  @media screen and (max-width: 768px){
+    font-size: rem(24px);
+  }
+}
+
+h5{
+  font-size: rem(20px);
+  font-weight: $font-weight-bold;
+  line-height: $line-height-computed;
+  margin-bottom: $margin-md;
+  font-family: $font-family-sans-serif;
+
+  @media screen and (max-width: 768px){
+    font-size: rem(18px);
+  }
+}
+
+h6{
+  font-size: rem(16px);
+  font-weight: $font-weight-bold;
+  line-height: $line-height-computed;
+  margin-bottom: $margin-md;
+  font-family: $font-family-sans-serif;
+
+  @media screen and (max-width: 768px){
+    font-size: rem(14px);
+  }
+}
+
+h1, h2, h3, h4, h5, h6{
+  color: $heading-color;
+  text-rendering: optimizeLegibility;
+  small{
+    font-size: rem(12px);
+  }
+}
+
+// defining Link Styles
+// -_-_-_-_-_-_-_-_-_-_-_--->
+
+
+a{
+  text-decoration: $link-decoration;
+  color: $link-color;
+  &:hover{
+    text-decoration: $link-hover-decoration;
+    color: $link-hover-color;
+  }
+}
+
+// ul, li and ol
+
+ul, ol, li{
+  list-style: $list-style-type $list-style-position;
+}
+
+// html and body
+
+html{
+  font-size: $font-size-base;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+
+  @media screen and (max-width: 768px){
+    font-size: rem(14px);
+  }
+}
+
+body{
+  font-family: $font-family-base;
+  line-height: $line-height-base;
+  color: $text-color-base;
+
+  // add ligature for better typography
+  font-feature-settings: "liga", "dlig", "hist";
+  font-variant-ligatures: common-ligatures discretionary-ligatures historical-ligatures;
+}
+
+// editing paragraph styles
+
+p{
+  font-family: $font-family-base;
+  margin-top: 0;
+  margin-bottom: $margin-md;
+
+  // Measuring the distance between paragraphs
+  // max-widht: #{type(base) * 30}px;
+}
+
+// small
+
+small{
+  font-size: $font-size-sm;
+}
+
+// strong and b
+
+strong, b {
+  font-weight: $font-weight-bold;
+}
+
+// em and i
+
+em, i{
+  font-style: italic;
+}
+
+// mark
+
+mark{
+  background-color: #fff4c2;
+  color: $text-color-base;
+  padding: $padding-xs;
+  border-radius: 3px;
+}
+
+// abbr
+
+abbr[title]{
+  border-bottom: 1px dotted #ddd;
+  cursor: help;
+}
+
+// blockquotes
+
+blockquote{
+  padding-left: 3%;
+  margin: 0;
+  border-left: 2px solid #333333;
+  border-radius: 3px;
+
+  p {
+    font-weight: $font-weight-light;
+
+    &:last-child{
+      margin-bottom: 0;
+    }
+  }
+
+  small{
+    display: block;
+    color: lighten(#000, 70%);
+
+    &::before{
+      content: '\2014 \00A0';
+    }
+  }
+}
+
+// others
+
+p, blockquote {
+  &::before, &::after{
+    content: "";
+  }
+}
+
+cite{
+  font-style: normal;
+}
+
+dfn{
+  font-style: italic;
+}
+
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sup { top: -0.5em; }
+sub { bottom: -0.25em; }
+samp { font-family: $font-family-mono; }
+
+.text-center {
+  text-align: center;
+}
+
+.text-left {
+  text-align: left;
+}
+
+.text-right {
+  text-align: right;
+}
+
+hr {
+  margin: $margin-md 0;
+  border: 0;
+  height: 1px;
+  background-color: $hr-color;
+}
+
+.hyphenate {
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  hyphens: auto;
+}
