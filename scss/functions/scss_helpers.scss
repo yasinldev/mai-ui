@@ -1,0 +1,31 @@
+// scss_helpers is a file that contains variables and mixins that are used throughout the project.
+// developed by: @yasinldev
+
+// defining function for lighten and darken colors
+@function lighten($color, $amount) {
+  @return mix($color, white, $amount);
+}
+
+@function darken($color, $amount){
+  @return mix($color, #3c3c3c, $amount);
+}
+
+// defining function for rgba
+@function rgba($color, $alpha) {
+  @return rgba(red($color), green($color), blue($color), $alpha);
+}
+
+// defining function for rem and em
+@function rem($pixels, $base: 16px) {
+  @return ($pixels / $base) * 1rem;
+}
+
+@function em($pixels, $base: 16px) {
+  @return ($pixels / $base) * 1em;
+}
+
+// defining function for strip unit
+@function strip-unit($number) {
+  @return $number / ($number * 0 + 1);
+}
+
