@@ -13,7 +13,7 @@ To get started with Mai UI, simply download or clone the repository and include 
 Mai UI is built using Sass, so you'll need to compile the Sass files into CSS.
 
 ```bash
-git clone https://github.com/your-username/mai-ui.git
+git clone https://github.com/yasinldev/mai-ui.git
 cd mai-ui
 ```
 
