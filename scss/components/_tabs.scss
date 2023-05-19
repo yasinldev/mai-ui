@@ -1,0 +1,57 @@
+/*
+    Tabs
+    -------------
+    developed by @yasinldev
+*/
+
+@import "./../base/_variables.scss";
+
+$set-tab-bottom-border-color: $primary-color; // it's can be any color
+
+.mai-tabs {
+    user-select: none;
+    display: flex;
+    padding: $padding-xs;
+
+    .tab-items {
+        padding: $padding-xs;
+        margin-right: $margin-xs;
+        cursor: pointer;
+        transition: all 0.2s ease-in-out;
+        border-top-right-radius: calc(map-get($border-radius-breakpoints, 'rounded-1') + 2px);
+        border-top-left-radius: calc(map-get($border-radius-breakpoints, 'rounded-1') + 2px);
+        border-bottom: 2px solid transparent;
+
+        &:hover {
+            transition: all 0.2s ease-in-out;
+            background-color: lighten($secondary-color, 40%);
+            border-radius: calc(map-get($border-radius-breakpoints, 'rounded-1') + 2px);
+        }
+    }
+
+
+    .tab-items-active{
+        @extend .tab-items;
+        border-bottom: 2px solid $set-tab-bottom-border-color !important;
+
+        border-bottom-left-radius: 0 !important;
+        border-bottom-right-radius: 0 !important;
+    }
+
+}
+
+.tab-full{
+    width: 100% !important;
+    text-align: center !important;
+}
+
+.tab-fill{
+    @media screen and (max-width: 768px){
+        flex-direction: column !important;
+    }
+}
+
+.tab-text-container{
+    white-space: nowrap !important;
+    overflow-x: auto !important;
+}

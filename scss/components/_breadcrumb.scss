@@ -1,0 +1,57 @@
+/*
+    Beardcrumb
+    -------------------------
+    @developed by @yasinldev
+*/
+
+@import './../base/_variables.scss';
+
+.mai-breadcrumb{
+    user-select: none;
+    display: flex;
+    max-width: fit-content;
+    flex-wrap: wrap;
+    align-items: center;
+    padding: 0.75rem 1rem;
+    margin-bottom: 1rem;
+    list-style: none;
+    border-radius: calc(map-get($border-radius-breakpoints, 'rounded-1') + 2px);
+    box-shadow: 0 1px 2px 0 rgba(0,0,0,.03);
+    font-family: $font-family-sans-serif;
+    font-size: 0.9rem;
+    color: $text-color-base;
+    transition: all 0.2s cubic-bezier(.645,.045,.355,1);
+
+    a{
+        color: $link-color;
+        text-decoration: none;
+        transition: 0.2s;
+
+        &:hover{
+            transition: 0.2s;
+            background-color: lighten($secondary-color, 40%);
+            border-radius: calc(map-get($border-radius-breakpoints, 'rounded-1') + 2px);
+            color: $text-color-base;
+        }
+    }
+
+    .mai-breadcrumb-item{
+        display: flex;
+        align-items: center;
+
+        .mai-breadcrumb-link{
+            display: inline-block;
+            padding: 0.5rem 0.75rem;
+            color: $text-color-base;
+            &:hover{
+                color: darken($text-color-base, 10%);
+            }
+        }
+
+        .mai-breadcrumb-separator{
+            display: inline-block;
+            padding: 0 0.5rem;
+            color: $heading-color;
+        }
+    }
+}

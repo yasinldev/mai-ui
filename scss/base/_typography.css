@@ -1,8 +1,98 @@
 @charset "UTF-8";
 /*
-  "__typography.scss" is an SCSS file typically used to manage typography styles in a project.
+  "_typography.scss" is an SCSS file typically used to manage typography styles in a project.
   This file makes it easy to specify typography styles such as font family, size, color, and other style properties.
 */
+/*
+  Mixins
+  ==========================================================================
+  - Main Colors
+  - Text Colors
+  - Background Colors
+  - Border Colors
+  - Link Colors
+  - Button Colors
+  - Form Colors
+  - Font Family's
+  - Text Styles
+  - Text Sizes and Paddings
+  - Links
+  - List Styles
+
+  DEFINENING
+
+  developed by @yasinldev
+*/
+.rounded-1 {
+  border-radius: 0.25rem !important;
+}
+
+.rounded-2 {
+  border-radius: 0.5rem !important;
+}
+
+.rounded-3 {
+  border-radius: 1rem !important;
+}
+
+.rounded-4 {
+  border-radius: 1.5rem !important;
+}
+
+.rounded-5 {
+  border-radius: 3rem !important;
+}
+
+.rounded-6 {
+  border-radius: 4rem !important;
+}
+
+.rounded-7 {
+  border-radius: 5rem !important;
+}
+
+.rounded-8 {
+  border-radius: 6rem !important;
+}
+
+.rounded-9 {
+  border-radius: 7rem !important;
+}
+
+.rounded-10 {
+  border-radius: 8rem !important;
+}
+
+.rounded-circle {
+  border-radius: 100% !important;
+}
+
+.rounded-pill {
+  border-radius: 50rem !important;
+}
+
+.rounded-top {
+  border-radius: 0 0 0.25rem 0.25rem !important;
+}
+
+.rounded-right {
+  border-radius: 0.25rem 0 0 0.25rem !important;
+}
+
+.rounded-bottom {
+  border-radius: 0.25rem 0.25rem 0 0 !important;
+}
+
+.rounded-left {
+  border-radius: 0 0.25rem 0.25rem 0 !important;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
 h1 {
   font-size: 2.5rem;
   font-weight: 600;
@@ -91,22 +181,14 @@ h1 small, h2 small, h3 small, h4 small, h5 small, h6 small {
 
 a {
   text-decoration: none;
-  color: #1890ff;
+  color: #128dff;
 }
 a:hover {
   text-decoration: pointer;
-  color: #266eb1;
+  color: #236db1;
 }
 
-ul {
-  list-style: disc inside;
-}
-
-ol {
-  list-style: disc inside;
-}
-
-li {
+ul, ol, li {
   list-style: disc inside;
 }
 
@@ -160,8 +242,10 @@ abbr[title] {
 }
 
 blockquote {
-  padding-left: 10%;
-  border-left: 4px solid #333333;
+  padding-left: 3%;
+  margin: 0;
+  border-left: 2px solid #333333;
+  border-radius: 3px;
 }
 blockquote p {
   font-weight: 300;
@@ -234,4 +318,4 @@ hr {
   hyphens: auto;
 }
 
-/*# sourceMappingURL=__typography.css.map */
+/*# sourceMappingURL=_typography.css.map */

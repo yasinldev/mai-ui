@@ -1,0 +1,617 @@
+/**
+    Utilities
+    ==========================================================================
+    A collection of useful utility classes.
+
+    developed by @yasinldev
+*/
+/*
+  Mixins
+  ==========================================================================
+  - Main Colors
+  - Text Colors
+  - Background Colors
+  - Border Colors
+  - Link Colors
+  - Button Colors
+  - Form Colors
+  - Font Family's
+  - Text Styles
+  - Text Sizes and Paddings
+  - Links
+  - List Styles
+
+  DEFINENING
+
+  developed by @yasinldev
+*/
+.rounded-1 {
+  border-radius: 0.25rem !important;
+}
+
+.rounded-2 {
+  border-radius: 0.5rem !important;
+}
+
+.rounded-3 {
+  border-radius: 1rem !important;
+}
+
+.rounded-4 {
+  border-radius: 1.5rem !important;
+}
+
+.rounded-5 {
+  border-radius: 3rem !important;
+}
+
+.rounded-6 {
+  border-radius: 4rem !important;
+}
+
+.rounded-7 {
+  border-radius: 5rem !important;
+}
+
+.rounded-8 {
+  border-radius: 6rem !important;
+}
+
+.rounded-9 {
+  border-radius: 7rem !important;
+}
+
+.rounded-10 {
+  border-radius: 8rem !important;
+}
+
+.rounded-circle {
+  border-radius: 100% !important;
+}
+
+.rounded-pill {
+  border-radius: 50rem !important;
+}
+
+.rounded-top {
+  border-radius: 0 0 0.25rem 0.25rem !important;
+}
+
+.rounded-right {
+  border-radius: 0.25rem 0 0 0.25rem !important;
+}
+
+.rounded-bottom {
+  border-radius: 0.25rem 0.25rem 0 0 !important;
+}
+
+.rounded-left {
+  border-radius: 0 0.25rem 0.25rem 0 !important;
+}
+
+.pr-1 {
+  padding-right: 0.25rem;
+}
+
+.pl-1 {
+  padding-left: 0.25rem;
+}
+
+.pb-1 {
+  padding-bottom: 0.25rem;
+}
+
+.pt-1 {
+  padding-top: 0.25rem;
+}
+
+.pr-2 {
+  padding-right: 0.5rem;
+}
+
+.pl-2 {
+  padding-left: 0.5rem;
+}
+
+.pb-2 {
+  padding-bottom: 0.5rem;
+}
+
+.pt-2 {
+  padding-top: 0.5rem;
+}
+
+.pr-3 {
+  padding-right: 1rem;
+}
+
+.pl-3 {
+  padding-left: 1rem;
+}
+
+.pb-3 {
+  padding-bottom: 1rem;
+}
+
+.pt-3 {
+  padding-top: 1rem;
+}
+
+.pr-4 {
+  padding-right: 1.5rem;
+}
+
+.pl-4 {
+  padding-left: 1.5rem;
+}
+
+.pb-4 {
+  padding-bottom: 1.5rem;
+}
+
+.pt-4 {
+  padding-top: 1.5rem;
+}
+
+.pr-5 {
+  padding-right: 3rem;
+}
+
+.pl-5 {
+  padding-left: 3rem;
+}
+
+.pb-5 {
+  padding-bottom: 3rem;
+}
+
+.pt-5 {
+  padding-top: 3rem;
+}
+
+.pr-6 {
+  padding-right: 4.5rem;
+}
+
+.pl-6 {
+  padding-left: 4.5rem;
+}
+
+.pb-6 {
+  padding-bottom: 4.5rem;
+}
+
+.pt-6 {
+  padding-top: 4.5rem;
+}
+
+.w-1 {
+  width: 1rem;
+}
+
+.w-2 {
+  width: 2rem;
+}
+
+.w-3 {
+  width: 4rem;
+}
+
+.w-4 {
+  width: 8rem;
+}
+
+.w-5 {
+  width: 16rem;
+}
+
+.w-6 {
+  width: 32rem;
+}
+
+.w-7 {
+  width: 48rem;
+}
+
+.w-8 {
+  width: 64rem;
+}
+
+.w-9 {
+  width: 96rem;
+}
+
+.h-1 {
+  height: 1rem;
+}
+
+.h-2 {
+  height: 2rem;
+}
+
+.h-3 {
+  height: 4rem;
+}
+
+.h-4 {
+  height: 8rem;
+}
+
+.h-5 {
+  height: 16rem;
+}
+
+.h-6 {
+  height: 32rem;
+}
+
+.h-7 {
+  height: 48rem;
+}
+
+.h-8 {
+  height: 64rem;
+}
+
+.h-9 {
+  height: 96rem;
+}
+
+.fs-1 {
+  font-size: 0.75rem;
+}
+
+.fs-2 {
+  font-size: 0.875rem;
+}
+
+.fs-3 {
+  font-size: 1rem;
+}
+
+.fs-4 {
+  font-size: 1.25rem;
+}
+
+.fs-5 {
+  font-size: 1.5rem;
+}
+
+.fs-6 {
+  font-size: 2rem;
+}
+
+.fs-7 {
+  font-size: 3rem;
+}
+
+.fs-8 {
+  font-size: 4rem;
+}
+
+.fs-9 {
+  font-size: 6rem;
+}
+
+.justify-content-center {
+  justify-content: center;
+}
+
+.justify-content-start {
+  justify-content: flex-start;
+}
+
+.justify-content-end {
+  justify-content: flex-end;
+}
+
+.justify-content-between {
+  justify-content: space-between;
+}
+
+.justify-content-around {
+  justify-content: space-around;
+}
+
+.display-flex {
+  display: flex !important;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-start {
+  text-align: start;
+}
+
+.text-end {
+  text-align: right;
+}
+
+.text-end-rtl {
+  text-align: left;
+}
+
+.text-primary {
+  color: #128dff;
+}
+
+.text-secondary {
+  color: #777986;
+}
+
+.text-success {
+  color: #049b63;
+}
+
+.text-info {
+  color: #4ba3f5;
+}
+
+.text-warning {
+  color: #b78011;
+}
+
+.text-error {
+  color: #b23428;
+}
+
+.text-light {
+  color: #fff;
+}
+
+.text-dark {
+  color: #5a5c69;
+}
+
+.align-items-center {
+  align-items: center;
+}
+
+.text-container {
+  white-space: nowrap !important;
+  overflow-x: auto !important;
+}
+
+.align-items-end {
+  align-items: flex-end;
+}
+
+.align-items-start {
+  align-items: flex-start;
+}
+
+.align-items-stretch {
+  align-items: stretch;
+}
+
+.align-items-baseline {
+  align-items: baseline;
+}
+
+.justify-content-between {
+  justify-content: space-between;
+}
+
+.bg-outline-primary {
+  border: 1px solid #128dff !important;
+  color: #128dff;
+}
+
+.bg-outline-secondary {
+  border: 1px solid #777986 !important;
+  color: #777986;
+}
+
+.bg-outline-success {
+  border: 1px solid #049b63 !important;
+  color: #049b63;
+}
+
+.bg-outline-info {
+  border: 1px solid #4ba3f5 !important;
+  color: #4ba3f5;
+}
+
+.bg-outline-warning {
+  border: 1px solid #b78011 !important;
+  color: #b78011;
+}
+
+.bg-outline-error {
+  border: 1px solid #b23428 !important;
+  color: #b23428;
+}
+
+.bg-outline-light {
+  border: 1px solid #fff !important;
+  color: #fff;
+}
+
+.bg-outline-dark {
+  border: 1px solid #5a5c69 !important;
+  color: #5a5c69;
+}
+
+.bg-primary {
+  background-color: #175ba4 !important;
+  color: #fff;
+}
+
+.bg-secondary {
+  background-color: #838a8f !important;
+  color: #fff;
+}
+
+.bg-success {
+  background-color: #4cce12 !important;
+  color: #fff;
+}
+
+.bg-info {
+  background-color: #4faecb !important;
+  color: #fff;
+}
+
+.bg-warning {
+  background-color: #99701b !important;
+  color: #fff;
+}
+
+.bg-error {
+  background-color: #df4b4b !important;
+  color: #fff;
+}
+
+.bg-light {
+  background-color: white !important;
+  color: #fff;
+}
+
+.bg-dark {
+  background-color: #727484 !important;
+  color: #fff;
+}
+
+.bg-soft-primary {
+  background-color: #c5e3ff !important;
+  color: #5a5c69;
+}
+
+.bg-soft-secondary {
+  background-color: #d5d6da !important;
+  color: #5a5c69;
+}
+
+.bg-soft-success {
+  background-color: #57fbbe !important;
+  color: #5a5c69;
+}
+
+.bg-soft-info {
+  background-color: #f4f9fe !important;
+  color: #5a5c69;
+}
+
+.bg-soft-warning {
+  background-color: #f4d087 !important;
+  color: #5a5c69;
+}
+
+.bg-soft-error {
+  background-color: #eaa9a2 !important;
+  color: #5a5c69;
+}
+
+.bg-soft-light {
+  background-color: #fff !important;
+  color: #5a5c69;
+}
+
+.bg-soft-dark {
+  background-color: #5a5c69 !important;
+  color: #5a5c69;
+}
+
+.mb-auto, .mt-auto, .ml-auto, .mr-auto {
+  margin: auto;
+}
+
+.mb-1 {
+  margin-bottom: 0.25rem;
+}
+
+.mt-1 {
+  margin-top: 0.25rem;
+}
+
+.ml-1 {
+  margin-left: 0.25rem;
+}
+
+.mr-1 {
+  margin-right: 0.25rem;
+}
+
+.mb-2 {
+  margin-bottom: 0.5rem;
+}
+
+.mt-2 {
+  margin-top: 0.5rem;
+}
+
+.ml-2 {
+  margin-left: 0.5rem;
+}
+
+.mr-2 {
+  margin-right: 0.5rem;
+}
+
+.mb-3 {
+  margin-bottom: 1rem;
+}
+
+.mt-3 {
+  margin-top: 1rem;
+}
+
+.ml-3 {
+  margin-left: 1rem;
+}
+
+.mr-3 {
+  margin-right: 1rem;
+}
+
+.mb-4 {
+  margin-bottom: 1.5rem;
+}
+
+.mt-4 {
+  margin-top: 1.5rem;
+}
+
+.ml-4 {
+  margin-left: 1.5rem;
+}
+
+.mr-4 {
+  margin-right: 1.5rem;
+}
+
+.mb-5 {
+  margin-bottom: 3rem;
+}
+
+.mt-5 {
+  margin-top: 3rem;
+}
+
+.ml-5 {
+  margin-left: 3rem;
+}
+
+.mr-5 {
+  margin-right: 3rem;
+}
+
+.mb-6 {
+  margin-bottom: 4.5rem;
+}
+
+.mt-6 {
+  margin-top: 4.5rem;
+}
+
+.ml-6 {
+  margin-left: 4.5rem;
+}
+
+.mr-6 {
+  margin-right: 4.5rem;
+}
+
+/*# sourceMappingURL=_utilities.css.map */

@@ -1,0 +1,62 @@
+/**
+    cards
+-----------------------------
+    developed by @yasinldev
+*/
+
+@import "./../base/_variables.scss";
+
+$card-border-color: $secondary-color;
+
+$card-size-breakpoints: (
+    'default': fit-content,
+    'sm': 300px,
+    'md': 500px,
+    'lg': 700px,
+    'xl': 900px,
+    'full': 100%,
+);
+
+@each $key, $values in $card-size-breakpoints {
+    .mai-card-#{$key} {
+        position: relative;
+        background-color: $component-background-color;
+        max-width: $values;
+        border-radius: calc(map-get($border-radius-breakpoints, 'rounded-1') + 2px);
+        padding: $padding-sm;
+        box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2);
+    }
+}
+
+.mai-card-group{
+    display: inline-flex !important;
+    flex-wrap: wrap;
+
+    .mai-card-default, .mai-card-sm, .mai-card-md, .mai-card-lg, .mai-card-xl, .mai-card-full{
+        margin: 0.5em;
+    }
+}
+
+.card-header {
+    padding: $padding-xs;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.card-footer{
+    padding: $padding-xs;
+    border-top: 1px solid #f0f0f0;
+}
+
+.card-img{
+    object-fit: cover;
+}
+
+.card-title{
+    font-size: $font-size-lg;
+    font-weight: $font-weight-bold;
+    font-family: $font-family-sans-serif;
+}
+
+.card-body{
+    padding: $padding-xs;
+}

@@ -1,0 +1,222 @@
+/*
+    Buttons
+-----------------------------
+    developed by @yasinldev
+
+    TODO: SOLID BUTTONS! (DONE)
+*/
+
+@import './../base/variables.scss';
+
+$buttons-size-breakpoints: (
+    'sm': 28px,
+    'default': 34px,
+    'lg': 42px,
+);
+
+$ripple-duration: 0.3s;
+
+@mixin define-button-clicked-event{
+    &:before {
+        content: '';
+        position:absolute;
+        display: block;
+        background: var(--ripple-background, white);
+        border-radius: 50%;
+        pointer-events: none;
+
+        //  position and size
+        top: calc(var(--y) * 1px);
+        left: calc(var(--x) * 1px);
+        width:  calc(var(--d) * 1px);
+        height: calc(var(--d) * 1px);
+
+        //  animated properties
+        opacity: calc(var(--o, 1) * var(--ripple-opacity, 0.3));
+        transition: calc(var(--t, 0) * var(--ripple-duration, 600ms)) var(--ripple-easing,linear);
+        transform: translate(-50%, -50%) scale(var(--s, 1));
+        transform-origin: center;
+    }
+}
+
+@each $key, $value in $buttons-size-breakpoints {
+    .mai-btn-#{$key} {
+        position: relative;
+        overflow: hidden;
+        user-select: none;
+        width: $value;
+        text-align: center;
+        cursor: pointer;
+        min-width: fit-content;
+        font-family: $font-family-sans-serif;
+        @if(#{$key} == 'sm'){
+            padding: 0.2rem 0.6rem 0.2rem 0.6rem !important;
+            border-radius: calc(map-get($border-radius-breakpoints, 'rounded-1'));
+        }
+        @else if(#{$key} == 'lg'){
+            border-radius: calc(map-get($border-radius-breakpoints, 'rounded-1') + 2px);
+            padding: 0.6rem 1.4rem 0.6rem 1.4rem !important;
+        }
+        @else {
+            border-radius: calc(map-get($border-radius-breakpoints, 'rounded-1') + 2px);
+            padding: 0.4rem 1.2rem 0.4rem 1.2rem !important;
+        }
+        margin: 0.5em;
+        display: inline-block;
+        transition: all 0.2s cubic-bezier(.645,.045,.355,1);
+
+        &:hover{
+            background-color: darken(#3c3c3c, 10%);
+        }
+
+        @include define-button-clicked-event;
+    }
+}
+
+.btn-text{
+    @extend .mai-btn-default;
+    background-color: transparent !important;
+    border: none !important;
+
+    &:hover{
+        background-color: lighten($secondary-color, 40%)
+    }
+    &:active{
+        background-color: darken($secondary-color, 10%)
+    }
+}
+
+
+.btn-block{
+    display: block !important;
+    width: 100% !important;
+    padding: 0 !important;
+}
+
+$buttons-type-breakpoints: (
+    'primary': $primary-color,
+    'secondary': $secondary-color,
+    'success': $success-color,
+    'warning': $warning-color,
+    'error': $error-color,
+    'info': $info-color,
+    'light': $default-light-color,
+    'dark': $default-dark-color,
+);
+
+$set-color: $default-light-color;
+
+@each $key, $value in $buttons-type-breakpoints {
+    .btn-#{$key} {
+        background-color: $value;
+        @if(#{$key} == 'light'){
+            color: $default-dark-color;
+        } @else {
+            color: $default-light-color;
+        }
+        border: 1px solid $value;
+
+        &:hover {
+            background-color: lighten($value, 10%);
+            border-color: lighten($value, 10%);
+            @if(#{$key} == 'light'){
+                color: darken($default-dark-color, 10%);
+            } @else {
+                color: darken($default-light-color, 10%);
+            }
+        }
+
+        &:active {
+            background-color: darken($value, 10%);
+            border-color: darken($value, 10%);
+        }
+    }
+}
+
+@each $key, $values in $buttons-type-breakpoints {
+    .btn-outline-#{$key} {
+        background-color: transparent;
+        @if(#{$key} == 'light'){
+            color: $default-dark-color;
+            border: 1px solid $default-dark-color;
+        } @else {
+            color: $values;
+            border: 1px solid $values;
+        }
+
+        &:hover {
+            @if(#{$key} == 'light'){
+                color: lighten($default-dark-color, 20%);
+                border-color: lighten($default-dark-color, 20%);
+            } @else {
+                border-color: lighten($values, 20%);
+                color: lighten($values, 20%);
+            }
+            background-color: transparent;
+        }
+
+        &:active {
+            border-color: darken($values, 10%);
+            color: darken($values, 10%);
+            background-color: transparent;
+        }
+    }
+}
+
+.mai-btn-group{
+    display: inline-flex;
+    @each $key, $value in $buttons-size-breakpoints {
+        .mai-btn-#{$key}, .mai-btn-#{$key}:first-child, .mai-btn-#{$key}:last-child{
+            border-radius: 0;
+            margin: 0;
+        }
+        .mai-btn-#{$key}:first-child{
+            border-top-left-radius: calc(map-get($border-radius-breakpoints, 'rounded-1'));
+            border-bottom-left-radius: calc(map-get($border-radius-breakpoints, 'rounded-1'));
+        }
+        .mai-btn-#{$key}:last-child{
+            border-top-right-radius: calc(map-get($border-radius-breakpoints, 'rounded-1'));
+            border-bottom-right-radius: calc(map-get($border-radius-breakpoints, 'rounded-1'));
+        }
+        // set border color transparent
+
+    }
+}
+
+@each $key, $value in $buttons-type-breakpoints {
+    .btn-soft-#{$key} {
+        background-color: lighten($value, 35%);
+        @if(#{$key} == 'light'){
+            color: $default-dark-color;
+        }
+        @else {
+            color: darken($value, 5%);
+        }
+        border: none;
+
+        &:hover {
+            @if(#{$key} == 'light') {
+                background-color: lighten($value, 10%);
+                color: lighten($default-dark-color, 20%);
+            } @else {
+                background-color: lighten($value, 10%);
+                color: lighten($default-light-color, 10%);
+            }
+        }
+
+        &:active {
+            background-color: darken($value, 10%);
+            color: lighten($value, 30%);
+        }
+    }
+}
+// wave animation
+$wave-color: rgba(0, 0, 0, 0.3);
+$transition-duration: 0.5s;
+
+.disabled{
+    cursor: not-allowed;
+    opacity: 0.5;
+    transition: none;
+}
+

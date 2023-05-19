@@ -1,0 +1,260 @@
+/**
+    Utilities
+    ==========================================================================
+    A collection of useful utility classes.
+
+    developed by @yasinldev
+*/
+
+$auto: auto !default;
+@import "./../base/_variables.scss";
+
+// Creating Margin breakpoints
+$mai-margin-breakpoints: (
+    0.25rem,
+    0.5rem,
+    1rem,
+    1.5rem,
+    3rem,
+    4.5rem,
+);
+
+@mixin define-margin-classes {
+    @if(#{$auto} == "auto"){
+        .mb-#{$auto}, .mt-#{$auto}, .ml-#{$auto}, .mr-#{$auto}{
+            margin: auto;
+        }
+    }
+
+    $margin-length: length($mai-margin-breakpoints);
+
+    @for $i from 1 through $margin-length{
+        .mb-#{$i}{
+            margin-bottom: nth($mai-margin-breakpoints, $i);
+        }
+        .mt-#{$i}{
+            margin-top: nth($mai-margin-breakpoints, $i);
+        }
+        .ml-#{$i}{
+            margin-left: nth($mai-margin-breakpoints, $i);
+        }
+        .mr-#{$i}{
+            margin-right: nth($mai-margin-breakpoints, $i);
+        }
+    }
+}
+
+// Creating Padding breakpoints
+$mai-padding-breakpoints: (
+    0.25rem,
+    0.5rem,
+    1rem,
+    1.5rem,
+    3rem,
+    4.5rem,
+);
+
+$padding-length: length($mai-padding-breakpoints);
+
+@for $i from 1 through $padding-length{
+    .pr-#{$i}{
+        padding-right: nth($mai-padding-breakpoints, $i);
+    }
+    .pl-#{$i}{
+        padding-left: nth($mai-padding-breakpoints, $i);
+    }
+    .pb-#{$i}{
+        padding-bottom: nth($mai-padding-breakpoints, $i);
+    }
+    .pt-#{$i}{
+        padding-top: nth($mai-padding-breakpoints, $i);
+    }
+}
+
+// Creating Width breakpoints
+$mai-width-breakpoints: (
+    w-1: 1rem,
+    w-2: 2rem,
+    w-3: 4rem,
+    w-4: 8rem,
+    w-5: 16rem,
+    w-6: 32rem,
+    w-7: 48rem,
+    w-8: 64rem,
+    w-9: 96rem,
+);
+
+@each $key, $value in $mai-width-breakpoints {
+    .#{$key} {
+        width: $value;
+    }
+}
+
+// Creating Height breakpoints
+$mai-height-breakpoints: (
+    h-1: 1rem,
+    h-2: 2rem,
+    h-3: 4rem,
+    h-4: 8rem,
+    h-5: 16rem,
+    h-6: 32rem,
+    h-7: 48rem,
+    h-8: 64rem,
+    h-9: 96rem,
+);
+
+@each $key, $value in $mai-height-breakpoints {
+    .#{$key} {
+        height: $value;
+    }
+}
+
+// Creating Font Size breakpoints
+$mai-font-size-breakpoints:(
+    fs-1: 0.75rem,
+    fs-2: 0.875rem,
+    fs-3: 1rem,
+    fs-4: 1.25rem,
+    fs-5: 1.5rem,
+    fs-6: 2rem,
+    fs-7: 3rem,
+    fs-8: 4rem,
+    fs-9: 6rem,
+);
+
+@each $key, $value in $mai-font-size-breakpoints{
+    .#{$key}{
+        font-size: $value;
+    }
+}
+
+$justify-content-breakpoints:(
+    justify-content-center: center,
+    justify-content-start: flex-start,
+    justify-content-end: flex-end,
+    justify-content-between: space-between,
+    justify-content-around: space-around,
+);
+
+@each $key, $value in $justify-content-breakpoints {
+    .#{$key}{
+        justify-content: $value;
+    }
+}
+
+.display-flex{
+    display: flex !important;
+}
+
+$text-style-breakpoints: (
+    text-center: center,
+    text-start: start,
+    text-end: right,
+    text-end-rtl: left,
+);
+
+$text-color-breakpoint: (
+    text-primary: $primary-color,
+    text-secondary: $secondary-color,
+    text-success: $success-color,
+    text-info: $info-color,
+    text-warning: $warning-color,
+    text-error: $error-color,
+    text-light: $default-light-color,
+    text-dark: $default-dark-color
+);
+
+@each $key, $value in $text-style-breakpoints {
+    .#{$key} {
+        text-align: $value;
+    }
+}
+
+@each $key, $value in $text-color-breakpoint {
+    .#{$key} {
+        color: $value;
+    }
+}
+
+.align-items-center {
+    align-items: center;
+}
+
+.text-container{
+    white-space: nowrap !important;
+    overflow-x: auto !important;
+}
+
+.align-items-end{
+    align-items: flex-end;
+}
+
+.align-items-start{
+    align-items: flex-start;
+}
+
+.align-items-stretch{
+    align-items: stretch;
+}
+
+.align-items-baseline{
+    align-items: baseline;
+}
+
+.justify-content-between{
+    justify-content: space-between;
+}
+
+$bg-outlines: (
+    bg-outline-primary: $primary-color,
+    bg-outline-secondary: $secondary-color,
+    bg-outline-success: $success-color,
+    bg-outline-info: $info-color,
+    bg-outline-warning: $warning-color,
+    bg-outline-error: $error-color,
+    bg-outline-light: $default-light-color,
+    bg-outline-dark: $default-dark-color
+);
+
+$bg-soft: (
+    bg-soft-primary: lighten($primary-color, 35%),
+    bg-soft-secondary: lighten($secondary-color, 35%),
+    bg-soft-success: lighten($success-color, 35%),
+    bg-soft-info: lighten($info-color, 35%),
+    bg-soft-warning: lighten($warning-color, 35%),
+    bg-soft-error: lighten($error-color, 35%),
+    bg-soft-light: $default-light-color,
+    bg-soft-dark: $default-dark-color
+);
+
+$bg-colors: (
+    bg-primary: #114277,
+    bg-secondary: #6a7075,
+    bg-success: #3b9f0e,
+    bg-info: #3595b2,
+    bg-warning: #6e5013,
+    bg-error: #d22525,
+    bg-light: $default-light-color,
+    bg-dark: $default-dark-color
+);
+
+@each $key, $value in $bg-outlines {
+    .#{$key} {
+        border: 1px solid $value !important;
+        color: $value;
+    }
+}
+@each $key, $value in $bg-colors {
+    .#{$key} {
+        background-color: lighten($value, 10%) !important;
+        color: $default-light-color;
+    }
+}
+@each $key, $value in $bg-soft {
+    .#{$key} {
+        background-color: $value !important;
+        color: $default-dark-color;
+    }
+}
+
+@include define-margin-classes;

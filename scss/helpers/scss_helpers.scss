@@ -17,15 +17,15 @@
 
 // defining function for rem and em
 @function rem($pixels, $base: 16px) {
-  @return ($pixels / $base) * 1rem;
+  @return calc(($pixels / $base) * 1rem);
 }
 
 @function em($pixels, $base: 16px) {
-  @return ($pixels / $base) * 1em;
+  @return calc(($pixels / $base) * 1em);
 }
 
 // defining function for strip unit
 @function strip-unit($number) {
-  @return $number / ($number * 0 + 1);
+  @return calc($number / ($number * 0 + 1));
 }
 

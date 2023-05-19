@@ -1,0 +1,109 @@
+/*
+    Anchor -> Navigation
+    ----------------------
+    developed by @yasinldev
+*/
+/*
+  Mixins
+  ==========================================================================
+  - Main Colors
+  - Text Colors
+  - Background Colors
+  - Border Colors
+  - Link Colors
+  - Button Colors
+  - Form Colors
+  - Font Family's
+  - Text Styles
+  - Text Sizes and Paddings
+  - Links
+  - List Styles
+
+  DEFINENING
+
+  developed by @yasinldev
+*/
+.rounded-1 {
+  border-radius: 0.25rem !important;
+}
+
+.rounded-2 {
+  border-radius: 0.5rem !important;
+}
+
+.rounded-3 {
+  border-radius: 1rem !important;
+}
+
+.rounded-4 {
+  border-radius: 1.5rem !important;
+}
+
+.rounded-5 {
+  border-radius: 3rem !important;
+}
+
+.rounded-6 {
+  border-radius: 4rem !important;
+}
+
+.rounded-7 {
+  border-radius: 5rem !important;
+}
+
+.rounded-8 {
+  border-radius: 6rem !important;
+}
+
+.rounded-9 {
+  border-radius: 7rem !important;
+}
+
+.rounded-10 {
+  border-radius: 8rem !important;
+}
+
+.rounded-circle {
+  border-radius: 50% !important;
+}
+
+.rounded-pill {
+  border-radius: 50rem !important;
+}
+
+.rounded-top {
+  border-radius: 0 0 0.25rem 0.25rem !important;
+}
+
+.rounded-right {
+  border-radius: 0.25rem 0 0 0.25rem !important;
+}
+
+.rounded-bottom {
+  border-radius: 0.25rem 0.25rem 0 0 !important;
+}
+
+.rounded-left {
+  border-radius: 0 0.25rem 0.25rem 0 !important;
+}
+
+.mai-scroll-spy {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+  font-size: 12px;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  max-width: 120px;
+  font-weight: normal;
+}
+.mai-scroll-spy .scroll-spy-item, .mai-scroll-spy .scroll-spy-active {
+  padding: 8px;
+  margin-right: 8px;
+  border-left: 2px solid #efefef;
+}
+.mai-scroll-spy .scroll-spy-active {
+  border-left: 2px solid #128dff !important;
+  color: #128dff;
+}
+
+/*# sourceMappingURL=_scrollspy.css.map */

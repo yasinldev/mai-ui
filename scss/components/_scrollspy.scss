@@ -1,0 +1,31 @@
+/*
+    Anchor -> Navigation
+    ----------------------
+    developed by @yasinldev
+*/
+
+@import "./../base/_variables.scss";
+
+$define-width: 120px;
+
+.mai-scroll-spy {
+    font-family: $font-family-sans-serif;
+    font-size: $font-size-sm;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    max-width: $define-width;
+    font-weight: normal;
+
+    .scroll-spy-item {
+        padding: $padding-xs;
+        margin-right: $margin-xs;
+        border-left: 2px solid #efefef;
+    }
+
+    .scroll-spy-active {
+        @extend .scroll-spy-item;
+        border-left: 2px solid $primary-color !important;
+        color: $primary-color;
+    }
+}

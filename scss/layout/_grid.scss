@@ -65,8 +65,8 @@ $container-sizes: (
 
         @each $bp, $container-size in $container-sizes {
             @include min(#{bp(#{$bp})}) {
-                width: 100%;
-                max-width: container(#{$bp});
+                width: 100% !important;
+                max-width: container(#{$bp}) !important;
             }
         }
     }
@@ -77,13 +77,13 @@ $container-sizes: (
         margin: 0 auto;
         padding-right: 1rem;
         padding-left: 1rem;
-        width: 100%;
+        width: 100% !important;
 
         $i: index($container-sizes, $bp $container-size);
 
         @for $j from $i through length($container-sizes) {
             @include min(#{bp(nth(nth($container-sizes, $j), 1))}) {
-                max-width: container(#{nth(nth($container-sizes, $j), 1)});
+                max-width: container(#{nth(nth($container-sizes, $j), 1)}) !important;
             }
         }
     }
@@ -146,7 +146,7 @@ $row-breakpoints: (
     @extend %#{$mai-class-column};
     flex-grow: 1;
     flex-basis: 0;
-    max-width: 100%;
+    max-width: 100% !important;
 }
 
 @mixin grid-base($namespace) {
@@ -165,14 +165,14 @@ $row-breakpoints: (
     @for $i from 1 through $mai-columns {
         .#{$mai-class-column}-#{$namespace}-#{$i} {
             flex-basis: get-column-percent($i);
-            max-width: get-column-percent($i);
+            max-width: get-column-percent($i) !important;
         }
     }
 
     @for $i from 1 through $mai-columns {
         @if($i != $mai-columns){
             .#{$mai-class-offset}-#{$namespace}-#{$i} {
-                margin-left: get-column-percent($i);
+                margin-left: get-column-percent($i) !important;
             }
         }
     }
@@ -187,7 +187,7 @@ $row-breakpoints: (
     @include grid-base($namespace);
 }
 
-@each $values in $row-breakpoints{
+@each $values in $row-breakpoints {
     @if length($values) == 1 {
         $namespace: nth($values, 1);
         @include grid-sizes($namespace);
@@ -196,9 +196,8 @@ $row-breakpoints: (
         $namespace: nth($values, 1);
         $size: nth($values, 2);
 
-        @media only screen and (min-width: #{$size}){
+        @media only screen and (min-width: #{$size}) {
             @include grid-sizes($namespace);
         }
     }
 }
-

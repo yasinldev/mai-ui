@@ -1,0 +1,131 @@
+/*
+    Tabs
+    -------------
+    developed by @yasinldev
+*/
+/*
+  Mixins
+  ==========================================================================
+  - Main Colors
+  - Text Colors
+  - Background Colors
+  - Border Colors
+  - Link Colors
+  - Button Colors
+  - Form Colors
+  - Font Family's
+  - Text Styles
+  - Text Sizes and Paddings
+  - Links
+  - List Styles
+
+  DEFINENING
+
+  developed by @yasinldev
+*/
+.rounded-1 {
+  border-radius: 0.25rem;
+}
+
+.rounded-2 {
+  border-radius: 0.5rem;
+}
+
+.rounded-3 {
+  border-radius: 1rem;
+}
+
+.rounded-4 {
+  border-radius: 1.5rem;
+}
+
+.rounded-5 {
+  border-radius: 3rem;
+}
+
+.rounded-6 {
+  border-radius: 4rem;
+}
+
+.rounded-7 {
+  border-radius: 5rem;
+}
+
+.rounded-8 {
+  border-radius: 6rem;
+}
+
+.rounded-9 {
+  border-radius: 7rem;
+}
+
+.rounded-10 {
+  border-radius: 8rem;
+}
+
+.rounded-circle {
+  border-radius: 50%;
+}
+
+.rounded-pill {
+  border-radius: 50rem;
+}
+
+.rounded-top {
+  border-radius: 0 0 0.25rem 0.25rem;
+}
+
+.rounded-right {
+  border-radius: 0.25rem 0 0 0.25rem;
+}
+
+.rounded-bottom {
+  border-radius: 0.25rem 0.25rem 0 0;
+}
+
+.rounded-left {
+  border-radius: 0 0.25rem 0.25rem 0;
+}
+
+.mai-tabs {
+  user-select: none;
+  display: flex;
+  padding: 8px;
+}
+.mai-tabs .tab-items, .mai-tabs .tab-items-active {
+  padding: 8px;
+  margin-right: 8px;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  border-top-right-radius: calc(0.25rem + 2px);
+  border-top-left-radius: calc(0.25rem + 2px);
+  border-bottom: 2px solid transparent;
+}
+.mai-tabs .tab-items:hover, .mai-tabs .tab-items-active:hover {
+  transition: all 0.2s ease-in-out;
+  background-color: #e3e3e6;
+  border-radius: calc(0.25rem + 2px);
+}
+.mai-tabs .tab-items-active {
+  border-bottom: 2px solid #128dff !important;
+  border-bottom-left-radius: 0 !important;
+  border-bottom-right-radius: 0 !important;
+}
+
+.tab-full {
+  width: 100% !important;
+  text-align: center !important;
+}
+
+@media screen and (max-width: 768px) {
+  .tab-fill {
+    flex-direction: column !important;
+  }
+}
+
+.tab-text-container {
+  white-space: nowrap !important;
+  overflow-x: auto !important;
+}
+
+/*# sourceMappingURL=_tabs.css.map */
