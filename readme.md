@@ -4,7 +4,7 @@ Mai UI is a minimalist UI library for modern web apps.
 It offers customizable theming, pre-designed components, and an easy-to-use structure.
 
 ## Features
-* **Customizable theming** - Mai UI is built with [CSS variables](https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties) and [SASS](https://sass-lang.com/), so you can easily customize the look and feel of your app.
+* **Customizable theming** - Mai UI is built with [CSS variables](https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties) and [SCSS](https://sass-lang.com/), so you can easily customize the look and feel of your app.
 * **Pre-designed components** - Mai UI comes with a set of pre-designed components, such as buttons, cards, and more.
 * **Easy-to-use structure** -  Mai UI follows a simple and intuitive structure that makes it easy to build and maintain your UI.
 
@@ -13,7 +13,7 @@ To get started with Mai UI, simply download or clone the repository and include 
 Mai UI is built using Sass, so you'll need to compile the Sass files into CSS.
 
 ```bash
-git clone https://github.com/your-username/mai-ui.git
+git clone https://github.com/yasinldev/mai-ui.git
 cd mai-ui
 ```
 
@@ -23,7 +23,7 @@ To customize the theme, simply edit the $primary-color and other variables in th
 ## Using the components
 Mai UI provides a set of pre-built components that you can use in your project. To use a component, simply include the corresponding HTML and CSS in your project. For example, to use a button, you can include the following HTML:
 ```html
-<button class="btn color-primary">Button</button>
+<button class="mai-btn color-primary">Button</button>
 ```
 And include the CSS:
 ```css
