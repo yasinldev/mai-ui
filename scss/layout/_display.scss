@@ -1,0 +1,22 @@
+/*
+    Displays
+*/
+
+$display-breakpoints: (
+        d-none: none,
+        d-inline: inline,
+        d-inline-block: inline-block,
+        d-block: block,
+        d-table: table,
+        d-table-row: table-row,
+        d-table-cell: table-cell,
+        d-flex: flex,
+        d-inline-flex: inline-flex,
+        d-grid: grid,
+);
+
+@each $key, $value in $display-breakpoints {
+    .#{$key} {
+        display: $value !important;
+    }
+}

@@ -1,0 +1,709 @@
+/*
+    Background
+    -> Outline
+    -> Soft
+    -> Normal
+*/
+
+$bg-outlines: (
+        bg-outline-primary: $primary-color,
+        bg-outline-secondary: $secondary-color,
+        bg-outline-success: $success-color,
+        bg-outline-info: $info-color,
+        bg-outline-warning: $warning-color,
+        bg-outline-error: $error-color,
+        bg-outline-light: $default-light-color,
+        bg-outline-dark: $default-dark-color,
+        bg-outline-tomato: $tomato-color,
+        bg-outline-orange: $orange-color,
+        bg-outline-hotpink: $hotpink-color,
+        bg-outline-coral: $coral-color,
+        bg-outline-darkornage: $darkorange-color,
+        bg-outline-lightsalmon: $lightsalmon-color,
+        bg-outline-lightpink: $lightpink-color,
+        bg-outline-peachpuff: $peachpuff-color,
+        bg-outline-navajowhite: $navajowhite-color,
+        bg-outline-khaki: $khaki-color,
+        bg-outline-gold: $gold-color,
+        bg-outline-yellow: $yellow-color,
+        bg-outline-lightyellow: $lightyellow-color,
+        bg-outline-lightgoldenrodyellow: $lightgoldenrodyellow-color,
+        bg-outline-lemonchiffon: $lemonchiffon-color,
+        bg-outline-papayawhip: $papayawhip-color,
+        bg-outline-moccasin: $moccasin-color,
+
+        bg-outline-primary-100: $primary-color-100,
+        bg-outline-primary-200: $primary-color-200,
+        bg-outline-primary-300: $primary-color-300,
+        bg-outline-primary-400: $primary-color-400,
+        bg-outline-primary-500: $primary-color-500,
+        bg-outline-primary-600: $primary-color-600,
+        bg-outline-primary-700: $primary-color-700,
+
+        bg-outline-secondary-100: $secondary-color-100,
+        bg-outline-secondary-200: $secondary-color-200,
+        bg-outline-secondary-300: $secondary-color-300,
+        bg-outline-secondary-400: $secondary-color-400,
+        bg-outline-secondary-500: $secondary-color-500,
+        bg-outline-secondary-600: $secondary-color-600,
+        bg-outline-secondary-700: $secondary-color-700,
+
+        bg-outline-success-100: $success-color-100,
+        bg-outline-success-200: $success-color-200,
+        bg-outline-success-300: $success-color-300,
+        bg-outline-success-400: $success-color-400,
+        bg-outline-success-500: $success-color-500,
+        bg-outline-success-600: $success-color-600,
+        bg-outline-success-700: $success-color-700,
+
+        bg-outline-info-100: $info-color-100,
+        bg-outline-info-200: $info-color-200,
+        bg-outline-info-300: $info-color-300,
+        bg-outline-info-400: $info-color-400,
+        bg-outline-info-500: $info-color-500,
+        bg-outline-info-600: $info-color-600,
+        bg-outline-info-700: $info-color-700,
+
+        bg-outline-warning-100: $warning-color-100,
+        bg-outline-warning-200: $warning-color-200,
+        bg-outline-warning-300: $warning-color-300,
+        bg-outline-warning-400: $warning-color-400,
+        bg-outline-warning-500: $warning-color-500,
+        bg-outline-warning-600: $warning-color-600,
+        bg-outline-warning-700: $warning-color-700,
+
+        bg-outline-error-100: $error-color-100,
+        bg-outline-error-200: $error-color-200,
+        bg-outline-error-300: $error-color-300,
+        bg-outline-error-400: $error-color-400,
+        bg-outline-error-500: $error-color-500,
+        bg-outline-error-600: $error-color-600,
+        bg-outline-error-700: $error-color-700,
+);
+
+$bg-soft: (
+        bg-soft-primary: lighten($primary-color, 35%),
+        bg-soft-secondary: lighten($secondary-color, 35%),
+        bg-soft-success: lighten($success-color, 35%),
+        bg-soft-info: lighten($info-color, 35%),
+        bg-soft-warning: lighten($warning-color, 35%),
+        bg-soft-error: lighten($error-color, 35%),
+        bg-soft-light: $default-light-color,
+        bg-soft-dark: $default-dark-color,
+
+        bg-soft-tomato: lighten($tomato-color, 35%),
+        bg-soft-orange: lighten($orange-color, 35%),
+        bg-soft-hotpink: lighten($hotpink-color, 35%),
+        bg-soft-coral: lighten($coral-color, 35%),
+        bg-soft-darkornage: lighten($darkorange-color, 35%),
+        bg-soft-lightsalmon: lighten($lightsalmon-color, 35%),
+        bg-soft-lightpink: lighten($lightpink-color, 35%),
+        bg-soft-peachpuff: lighten($peachpuff-color, 35%),
+        bg-soft-navajowhite: lighten($navajowhite-color, 35%),
+        bg-soft-khaki: lighten($khaki-color, 35%),
+        bg-soft-gold: lighten($gold-color, 35%),
+        bg-soft-yellow: lighten($yellow-color, 35%),
+        bg-soft-lightyellow: lighten($lightyellow-color, 35%),
+        bg-soft-lightgoldenrodyellow: lighten($lightgoldenrodyellow-color, 35%),
+        bg-soft-lemonchiffon: lighten($lemonchiffon-color, 35%),
+        bg-soft-papayawhip: lighten($papayawhip-color, 35%),
+        bg-soft-moccasin: lighten($moccasin-color, 35%),
+
+        bg-soft-primary-100: lighten($primary-color-100, 35%),
+        bg-soft-primary-200: lighten($primary-color-200, 35%),
+        bg-soft-primary-300: lighten($primary-color-300, 35%),
+        bg-soft-primary-400: lighten($primary-color-400, 35%),
+        bg-soft-primary-500: lighten($primary-color-500, 35%),
+        bg-soft-primary-600: lighten($primary-color-600, 35%),
+        bg-soft-primary-700: lighten($primary-color-700, 35%),
+
+        bg-soft-secondary-100: lighten($secondary-color-100, 35%),
+        bg-soft-secondary-200: lighten($secondary-color-200, 35%),
+        bg-soft-secondary-300: lighten($secondary-color-300, 35%),
+        bg-soft-secondary-400: lighten($secondary-color-400, 35%),
+        bg-soft-secondary-500: lighten($secondary-color-500, 35%),
+        bg-soft-secondary-600: lighten($secondary-color-600, 35%),
+        bg-soft-secondary-700: lighten($secondary-color-700, 35%),
+
+        bg-soft-success-100: lighten($success-color-100, 35%),
+        bg-soft-success-200: lighten($success-color-200, 35%),
+        bg-soft-success-300: lighten($success-color-300, 35%),
+        bg-soft-success-400: lighten($success-color-400, 35%),
+        bg-soft-success-500: lighten($success-color-500, 35%),
+        bg-soft-success-600: lighten($success-color-600, 35%),
+        bg-soft-success-700: lighten($success-color-700, 35%),
+
+        bg-soft-info-100: lighten($info-color-100, 35%),
+        bg-soft-info-200: lighten($info-color-200, 35%),
+        bg-soft-info-300: lighten($info-color-300, 35%),
+        bg-soft-info-400: lighten($info-color-400, 35%),
+        bg-soft-info-500: lighten($info-color-500, 35%),
+        bg-soft-info-600: lighten($info-color-600, 35%),
+        bg-soft-info-700: lighten($info-color-700, 35%),
+
+        bg-soft-warning-100: lighten($warning-color-100, 35%),
+        bg-soft-warning-200: lighten($warning-color-200, 35%),
+        bg-soft-warning-300: lighten($warning-color-300, 35%),
+        bg-soft-warning-400: lighten($warning-color-400, 35%),
+        bg-soft-warning-500: lighten($warning-color-500, 35%),
+        bg-soft-warning-600: lighten($warning-color-600, 35%),
+        bg-soft-warning-700: lighten($warning-color-700, 35%),
+
+        bg-soft-error-100: lighten($error-color-100, 35%),
+        bg-soft-error-200: lighten($error-color-200, 35%),
+        bg-soft-error-300: lighten($error-color-300, 35%),
+        bg-soft-error-400: lighten($error-color-400, 35%),
+        bg-soft-error-500: lighten($error-color-500, 35%),
+        bg-soft-error-600: lighten($error-color-600, 35%),
+        bg-soft-error-700: lighten($error-color-700, 35%),
+);
+
+$bg-colors: (
+        bg-primary: darken($primary-color, 90%),
+        bg-secondary: darken($secondary-color, 90%),
+        bg-success: darken($success-color, 90%),
+        bg-info: darken($info-color, 90%),
+        bg-warning: darken($warning-color, 90%),
+        bg-error: darken($error-color, 90%),
+        bg-light: $default-light-color,
+        bg-dark: $default-dark-color,
+
+        bg-tomato: darken($tomato-color, 90%),
+        bg-orange: darken($orange-color, 90%),
+        bg-hotpink: darken($hotpink-color, 90%),
+        bg-coral: darken($coral-color, 90%),
+        bg-darkornage: darken($darkorange-color, 90%),
+        bg-lightsalmon: darken($lightsalmon-color, 90%),
+        bg-lightpink: darken($lightpink-color, 90%),
+        bg-peachpuff: darken($peachpuff-color, 90%),
+        bg-navajowhite: darken($navajowhite-color, 90%),
+        bg-khaki: darken($khaki-color, 90%),
+        bg-gold: darken($gold-color, 90%),
+        bg-yellow: darken($yellow-color, 90%),
+        bg-lightyellow: darken($lightyellow-color, 90%),
+        bg-lightgoldenrodyellow: darken($lightgoldenrodyellow-color, 90%),
+        bg-lemonchiffon: darken($lemonchiffon-color, 90%),
+        bg-papayawhip: darken($papayawhip-color, 90%),
+        bg-moccasin: darken($moccasin-color, 90%),
+
+        bg-primary-100: $primary-color-100,
+        bg-primary-200: $primary-color-200,
+        bg-primary-300: $primary-color-300,
+        bg-primary-400: $primary-color-400,
+        bg-primary-500: $primary-color-500,
+        bg-primary-600: $primary-color-600,
+        bg-primary-700: $primary-color-700,
+
+        bg-secondary-100: $secondary-color-100,
+        bg-secondary-200: $secondary-color-200,
+        bg-secondary-300: $secondary-color-300,
+        bg-secondary-400: $secondary-color-400,
+        bg-secondary-500: $secondary-color-500,
+        bg-secondary-600: $secondary-color-600,
+        bg-secondary-700: $secondary-color-700,
+
+        bg-success-100: $success-color-100,
+        bg-success-200: $success-color-200,
+        bg-success-300: $success-color-300,
+        bg-success-400: $success-color-400,
+        bg-success-500: $success-color-500,
+        bg-success-600: $success-color-600,
+        bg-success-700: $success-color-700,
+
+        bg-info-100: $info-color-100,
+        bg-info-200: $info-color-200,
+        bg-info-300: $info-color-300,
+        bg-info-400: $info-color-400,
+        bg-info-500: $info-color-500,
+        bg-info-600: $info-color-600,
+        bg-info-700: $info-color-700,
+
+        bg-warning-100: $warning-color-100,
+        bg-warning-200: $warning-color-200,
+        bg-warning-300: $warning-color-300,
+        bg-warning-400: $warning-color-400,
+        bg-warning-500: $warning-color-500,
+        bg-warning-600: $warning-color-600,
+        bg-warning-700: $warning-color-700,
+
+        bg-error-100: $error-color-100,
+        bg-error-200: $error-color-200,
+        bg-error-300: $error-color-300,
+        bg-error-400: $error-color-400,
+        bg-error-500: $error-color-500,
+        bg-error-600: $error-color-600,
+        bg-error-700: $error-color-700,
+);
+
+$bg-hovers: (
+        bg-hover-primary: darken($primary-color, 85%),
+        bg-hover-secondary: darken($secondary-color, 85%),
+        bg-hover-success: darken($success-color, 85%),
+        bg-hover-info: darken($info-color, 85%),
+        bg-hover-warning: darken($warning-color, 85%),
+        bg-hover-error: darken($error-color, 85%),
+        bg-hover-light: darken($default-light-color, 85%),
+        bg-hover-dark: darken($default-dark-color, 85%),
+
+        bg-hover-tomato: darken($tomato-color, 85%),
+        bg-hover-orange: darken($orange-color, 85%),
+        bg-hover-hotpink: darken($hotpink-color, 85%),
+        bg-hover-coral: darken($coral-color, 85%),
+        bg-hover-darkornage: darken($darkorange-color, 85%),
+        bg-hover-lightsalmon: darken($lightsalmon-color, 85%),
+        bg-hover-lightpink: darken($lightpink-color, 85%),
+        bg-hover-peachpuff: darken($peachpuff-color, 85%),
+        bg-hover-navajowhite: darken($navajowhite-color, 85%),
+        bg-hover-khaki: darken($khaki-color, 85%),
+        bg-hover-gold: darken($gold-color, 85%),
+        bg-hover-yellow: darken($yellow-color, 85%),
+        bg-hover-lightyellow: darken($lightyellow-color, 85%),
+        bg-hover-lightgoldenrodyellow: darken($lightgoldenrodyellow-color, 85%),
+        bg-hover-lemonchiffon: darken($lemonchiffon-color, 85%),
+        bg-hover-papayawhip: darken($papayawhip-color, 85%),
+        bg-hover-moccasin: darken($moccasin-color, 85%),
+
+        bg-hover-primary-100: $primary-color-100,
+        bg-hover-primary-200: $primary-color-200,
+        bg-hover-primary-300: $primary-color-300,
+        bg-hover-primary-400: $primary-color-400,
+        bg-hover-primary-500: $primary-color-500,
+        bg-hover-primary-600: $primary-color-600,
+        bg-hover-primary-700: $primary-color-700,
+
+        bg-hover-secondary-100: $secondary-color-100,
+        bg-hover-secondary-200: $secondary-color-200,
+        bg-hover-secondary-300: $secondary-color-300,
+        bg-hover-secondary-400: $secondary-color-400,
+        bg-hover-secondary-500: $secondary-color-500,
+        bg-hover-secondary-600: $secondary-color-600,
+        bg-hover-secondary-700: $secondary-color-700,
+
+        bg-hover-success-100: $success-color-100,
+        bg-hover-success-200: $success-color-200,
+        bg-hover-success-300: $success-color-300,
+        bg-hover-success-400: $success-color-400,
+        bg-hover-success-500: $success-color-500,
+        bg-hover-success-600: $success-color-600,
+        bg-hover-success-700: $success-color-700,
+
+        bg-hover-info-100: $info-color-100,
+        bg-hover-info-200: $info-color-200,
+        bg-hover-info-300: $info-color-300,
+        bg-hover-info-400: $info-color-400,
+        bg-hover-info-500: $info-color-500,
+        bg-hover-info-600: $info-color-600,
+        bg-hover-info-700: $info-color-700,
+
+        bg-hover-warning-100: $warning-color-100,
+        bg-hover-warning-200: $warning-color-200,
+        bg-hover-warning-300: $warning-color-300,
+        bg-hover-warning-400: $warning-color-400,
+        bg-hover-warning-500: $warning-color-500,
+        bg-hover-warning-600: $warning-color-600,
+        bg-hover-warning-700: $warning-color-700,
+
+        bg-hover-error-100: $error-color-100,
+        bg-hover-error-200: $error-color-200,
+        bg-hover-error-300: $error-color-300,
+        bg-hover-error-400: $error-color-400,
+        bg-hover-error-500: $error-color-500,
+        bg-hover-error-600: $error-color-600,
+        bg-hover-error-700: $error-color-700,
+);
+
+// For Responsive Background Colors
+
+$bg-for-sm-device: (
+        bg-sm-primary: $primary-color,
+        bg-sm-secondary: $secondary-color,
+        bg-sm-success: $success-color,
+        bg-sm-info: $info-color,
+        bg-sm-warning: $warning-color,
+        bg-sm-error: $error-color,
+        bg-sm-light: $default-light-color,
+        bg-sm-dark: $default-dark-color,
+
+        bg-sm-tomato: $tomato-color,
+        bg-sm-orange: $orange-color,
+        bg-sm-hotpink: $hotpink-color,
+        bg-sm-coral: $coral-color,
+        bg-sm-darkornage: $darkorange-color,
+        bg-sm-lightsalmon: $lightsalmon-color,
+        bg-sm-lightpink: $lightpink-color,
+        bg-sm-peachpuff: $peachpuff-color,
+        bg-sm-navajowhite: $navajowhite-color,
+        bg-sm-khaki: $khaki-color,
+        bg-sm-gold: $gold-color,
+        bg-sm-yellow: $yellow-color,
+        bg-sm-lightyellow: $lightyellow-color,
+        bg-sm-lightgoldenrodyellow: $lightgoldenrodyellow-color,
+        bg-sm-lemonchiffon: $lemonchiffon-color,
+        bg-sm-papayawhip: $papayawhip-color,
+        bg-sm-moccasin: $moccasin-color,
+
+        bg-sm-primary-100: $primary-color-100,
+        bg-sm-primary-200: $primary-color-200,
+        bg-sm-primary-300: $primary-color-300,
+        bg-sm-primary-400: $primary-color-400,
+        bg-sm-primary-500: $primary-color-500,
+        bg-sm-primary-600: $primary-color-600,
+        bg-sm-primary-700: $primary-color-700,
+
+        bg-sm-secondary-100: $secondary-color-100,
+        bg-sm-secondary-200: $secondary-color-200,
+        bg-sm-secondary-300: $secondary-color-300,
+        bg-sm-secondary-400: $secondary-color-400,
+        bg-sm-secondary-500: $secondary-color-500,
+        bg-sm-secondary-600: $secondary-color-600,
+        bg-sm-secondary-700: $secondary-color-700,
+
+        bg-sm-success-100: $success-color-100,
+        bg-sm-success-200: $success-color-200,
+        bg-sm-success-300: $success-color-300,
+        bg-sm-success-400: $success-color-400,
+        bg-sm-success-500: $success-color-500,
+        bg-sm-success-600: $success-color-600,
+        bg-sm-success-700: $success-color-700,
+
+        bg-sm-info-100: $info-color-100,
+        bg-sm-info-200: $info-color-200,
+        bg-sm-info-300: $info-color-300,
+        bg-sm-info-400: $info-color-400,
+        bg-sm-info-500: $info-color-500,
+        bg-sm-info-600: $info-color-600,
+        bg-sm-info-700: $info-color-700,
+
+        bg-sm-warning-100: $warning-color-100,
+        bg-sm-warning-200: $warning-color-200,
+        bg-sm-warning-300: $warning-color-300,
+        bg-sm-warning-400: $warning-color-400,
+        bg-sm-warning-500: $warning-color-500,
+        bg-sm-warning-600: $warning-color-600,
+        bg-sm-warning-700: $warning-color-700,
+
+        bg-sm-error-100: $error-color-100,
+        bg-sm-error-200: $error-color-200,
+        bg-sm-error-300: $error-color-300,
+        bg-sm-error-400: $error-color-400,
+        bg-sm-error-500: $error-color-500,
+        bg-sm-error-600: $error-color-600,
+        bg-sm-error-700: $error-color-700,
+);
+
+$bg-for-xs-device: (
+    bg-xs-primary: $primary-color,
+    bg-xs-secondary: $secondary-color,
+    bg-xs-success: $success-color,
+    bg-xs-info: $info-color,
+    bg-xs-warning: $warning-color,
+    bg-xs-error: $error-color,
+    bg-xs-light: $default-light-color,
+    bg-xs-dark: $default-dark-color,
+
+    bg-xs-tomato: $tomato-color,
+    bg-xs-orange: $orange-color,
+    bg-xs-hotpink: $hotpink-color,
+    bg-xs-coral: $coral-color,
+    bg-xs-darkornage: $darkorange-color,
+    bg-xs-lightsalmon: $lightsalmon-color,
+    bg-xs-lightpink: $lightpink-color,
+    bg-xs-peachpuff: $peachpuff-color,
+    bg-xs-navajowhite: $navajowhite-color,
+    bg-xs-khaki: $khaki-color,
+    bg-xs-gold: $gold-color,
+    bg-xs-yellow: $yellow-color,
+    bg-xs-lightyellow: $lightyellow-color,
+    bg-xs-lightgoldenrodyellow: $lightgoldenrodyellow-color,
+    bg-xs-lemonchiffon: $lemonchiffon-color,
+    bg-xs-papayawhip: $papayawhip-color,
+    bg-xs-moccasin: $moccasin-color,
+
+    bg-xs-primary-100: $primary-color-100,
+    bg-xs-primary-200: $primary-color-200,
+    bg-xs-primary-300: $primary-color-300,
+    bg-xs-primary-400: $primary-color-400,
+    bg-xs-primary-500: $primary-color-500,
+    bg-xs-primary-600: $primary-color-600,
+    bg-xs-primary-700: $primary-color-700,
+
+    bg-xs-secondary-100: $secondary-color-100,
+    bg-xs-secondary-200: $secondary-color-200,
+    bg-xs-secondary-300: $secondary-color-300,
+    bg-xs-secondary-400: $secondary-color-400,
+    bg-xs-secondary-500: $secondary-color-500,
+    bg-xs-secondary-600: $secondary-color-600,
+    bg-xs-secondary-700: $secondary-color-700,
+
+    bg-xs-success-100: $success-color-100,
+    bg-xs-success-200: $success-color-200,
+    bg-xs-success-300: $success-color-300,
+    bg-xs-success-400: $success-color-400,
+    bg-xs-success-500: $success-color-500,
+    bg-xs-success-600: $success-color-600,
+    bg-xs-success-700: $success-color-700,
+
+    bg-xs-info-100: $info-color-100,
+    bg-xs-info-200: $info-color-200,
+    bg-xs-info-300: $info-color-300,
+    bg-xs-info-400: $info-color-400,
+    bg-xs-info-500: $info-color-500,
+    bg-xs-info-600: $info-color-600,
+    bg-xs-info-700: $info-color-700,
+
+    bg-xs-warning-100: $warning-color-100,
+    bg-xs-warning-200: $warning-color-200,
+    bg-xs-warning-300: $warning-color-300,
+    bg-xs-warning-400: $warning-color-400,
+    bg-xs-warning-500: $warning-color-500,
+    bg-xs-warning-600: $warning-color-600,
+    bg-xs-warning-700: $warning-color-700,
+
+    bg-xs-error-100: $error-color-100,
+    bg-xs-error-200: $error-color-200,
+    bg-xs-error-300: $error-color-300,
+    bg-xs-error-400: $error-color-400,
+    bg-xs-error-500: $error-color-500,
+    bg-xs-error-600: $error-color-600,
+    bg-xs-error-700: $error-color-700,
+);
+
+$bg-for-md-device:(
+    bg-md-primary: $primary-color,
+    bg-md-secondary: $secondary-color,
+    bg-md-success: $success-color,
+    bg-md-info: $info-color,
+    bg-md-warning: $warning-color,
+    bg-md-error: $error-color,
+    bg-md-light: $default-light-color,
+    bg-md-dark: $default-dark-color,
+
+    bg-md-tomato: $tomato-color,
+    bg-md-orange: $orange-color,
+    bg-md-hotpink: $hotpink-color,
+    bg-md-coral: $coral-color,
+    bg-md-darkornage: $darkorange-color,
+    bg-md-lightsalmon: $lightsalmon-color,
+    bg-md-lightpink: $lightpink-color,
+    bg-md-peachpuff: $peachpuff-color,
+    bg-md-navajowhite: $navajowhite-color,
+    bg-md-khaki: $khaki-color,
+    bg-md-gold: $gold-color,
+    bg-md-yellow: $yellow-color,
+    bg-md-lightyellow: $lightyellow-color,
+    bg-md-lightgoldenrodyellow: $lightgoldenrodyellow-color,
+    bg-md-lemonchiffon: $lemonchiffon-color,
+    bg-md-papayawhip: $papayawhip-color,
+    bg-md-moccasin: $moccasin-color,
+
+    bg-md-primary-100: $primary-color-100,
+    bg-md-primary-200: $primary-color-200,
+    bg-md-primary-300: $primary-color-300,
+    bg-md-primary-400: $primary-color-400,
+    bg-md-primary-500: $primary-color-500,
+    bg-md-primary-600: $primary-color-600,
+    bg-md-primary-700: $primary-color-700,
+
+    bg-md-secondary-100: $secondary-color-100,
+    bg-md-secondary-200: $secondary-color-200,
+    bg-md-secondary-300: $secondary-color-300,
+    bg-md-secondary-400: $secondary-color-400,
+    bg-md-secondary-500: $secondary-color-500,
+    bg-md-secondary-600: $secondary-color-600,
+    bg-md-secondary-700: $secondary-color-700,
+
+    bg-md-success-100: $success-color-100,
+    bg-md-success-200: $success-color-200,
+    bg-md-success-300: $success-color-300,
+    bg-md-success-400: $success-color-400,
+    bg-md-success-500: $success-color-500,
+    bg-md-success-600: $success-color-600,
+    bg-md-success-700: $success-color-700,
+
+    bg-md-info-100: $info-color-100,
+    bg-md-info-200: $info-color-200,
+    bg-md-info-300: $info-color-300,
+    bg-md-info-400: $info-color-400,
+    bg-md-info-500: $info-color-500,
+    bg-md-info-600: $info-color-600,
+    bg-md-info-700: $info-color-700,
+
+    bg-md-warning-100: $warning-color-100,
+    bg-md-warning-200: $warning-color-200,
+    bg-md-warning-300: $warning-color-300,
+    bg-md-warning-400: $warning-color-400,
+    bg-md-warning-500: $warning-color-500,
+    bg-md-warning-600: $warning-color-600,
+    bg-md-warning-700: $warning-color-700,
+
+    bg-md-error-100: $error-color-100,
+    bg-md-error-200: $error-color-200,
+    bg-md-error-300: $error-color-300,
+    bg-md-error-400: $error-color-400,
+    bg-md-error-500: $error-color-500,
+    bg-md-error-600: $error-color-600,
+    bg-md-error-700: $error-color-700,
+);
+
+$bg-for-lg-device: (
+    bg-lg-primary: $primary-color,
+    bg-lg-secondary: $secondary-color,
+    bg-lg-success: $success-color,
+    bg-lg-info: $info-color,
+    bg-lg-warning: $warning-color,
+    bg-lg-error: $error-color,
+    bg-lg-light: $default-light-color,
+    bg-lg-dark: $default-dark-color,
+
+    bg-lg-tomato: $tomato-color,
+    bg-lg-orange: $orange-color,
+    bg-lg-hotpink: $hotpink-color,
+    bg-lg-coral: $coral-color,
+    bg-lg-darkornage: $darkorange-color,
+    bg-lg-lightsalmon: $lightsalmon-color,
+    bg-lg-lightpink: $lightpink-color,
+    bg-lg-peachpuff: $peachpuff-color,
+    bg-lg-navajowhite: $navajowhite-color,
+    bg-lg-khaki: $khaki-color,
+    bg-lg-gold: $gold-color,
+    bg-lg-yellow: $yellow-color,
+    bg-lg-lightyellow: $lightyellow-color,
+    bg-lg-lightgoldenrodyellow: $lightgoldenrodyellow-color,
+    bg-lg-lemonchiffon: $lemonchiffon-color,
+    bg-lg-papayawhip: $papayawhip-color,
+    bg-lg-moccasin: $moccasin-color,
+
+    bg-lg-primary-100: $primary-color-100,
+    bg-lg-primary-200: $primary-color-200,
+    bg-lg-primary-300: $primary-color-300,
+    bg-lg-primary-400: $primary-color-400,
+    bg-lg-primary-500: $primary-color-500,
+    bg-lg-primary-600: $primary-color-600,
+    bg-lg-primary-700: $primary-color-700,
+
+    bg-lg-secondary-100: $secondary-color-100,
+    bg-lg-secondary-200: $secondary-color-200,
+    bg-lg-secondary-300: $secondary-color-300,
+    bg-lg-secondary-400: $secondary-color-400,
+    bg-lg-secondary-500: $secondary-color-500,
+    bg-lg-secondary-600: $secondary-color-600,
+    bg-lg-secondary-700: $secondary-color-700,
+
+    bg-lg-success-100: $success-color-100,
+    bg-lg-success-200: $success-color-200,
+    bg-lg-success-300: $success-color-300,
+    bg-lg-success-400: $success-color-400,
+    bg-lg-success-500: $success-color-500,
+    bg-lg-success-600: $success-color-600,
+    bg-lg-success-700: $success-color-700,
+
+    bg-lg-info-100: $info-color-100,
+    bg-lg-info-200: $info-color-200,
+    bg-lg-info-300: $info-color-300,
+    bg-lg-info-400: $info-color-400,
+    bg-lg-info-500: $info-color-500,
+    bg-lg-info-600: $info-color-600,
+    bg-lg-info-700: $info-color-700,
+
+    bg-lg-warning-100: $warning-color-100,
+    bg-lg-warning-200: $warning-color-200,
+    bg-lg-warning-300: $warning-color-300,
+    bg-lg-warning-400: $warning-color-400,
+    bg-lg-warning-500: $warning-color-500,
+    bg-lg-warning-600: $warning-color-600,
+    bg-lg-warning-700: $warning-color-700,
+
+    bg-lg-error-100: $error-color-100,
+    bg-lg-error-200: $error-color-200,
+    bg-lg-error-300: $error-color-300,
+    bg-lg-error-400: $error-color-400,
+    bg-lg-error-500: $error-color-500,
+    bg-lg-error-600: $error-color-600,
+    bg-lg-error-700: $error-color-700,
+);
+
+
+@each $key, $value in $bg-for-xs-device {
+    @media (max-width: 575px) {
+        .#{$key} {
+            background-color: $value !important;
+        }
+    }
+}
+
+@each $key, $value in $bg-for-sm-device {
+    @media (min-width: 576px) and (max-width: 767px) {
+        .#{$key} {
+            background-color: $value !important;
+        }
+    }
+}
+
+@each $key, $value in $bg-for-md-device {
+    @media (min-width: 768px) and (max-width: 991px) {
+        .#{$key} {
+            background-color: $value !important;
+        }
+    }
+}
+
+@each $key, $value in $bg-for-lg-device {
+    @media (min-width: 992px) and (max-width: 1199px) {
+        .#{$key} {
+            background-color: $value !important;
+        }
+    }
+}
+
+@each $key, $value in $bg-outlines {
+    .#{$key} {
+        border: 1px solid $value !important;
+        color: $value;
+    }
+}
+@each $key, $value in $bg-colors {
+    .#{$key} {
+        background-color: $value !important;
+    }
+}
+@each $key, $value in $bg-soft {
+    .#{$key} {
+        background-color: $value !important;
+    }
+}
+@each $key, $value in $bg-hovers {
+    .#{$key}:hover {
+        background-color: $value !important;
+    }
+}
+
+// bg attachments
+
+$bg-attachments: (
+        bg-attachment-fixed: fixed,
+        bg-attachment-local: local,
+        bg-attachment-scroll: scroll,
+);
+
+@each $key, $value in $bg-attachments {
+    .#{$key} {
+        background-attachment: $value !important;
+    }
+}
+
+// bg clip
+
+$bg-clips: (
+        bg-clip-border: border-box,
+        bg-clip-padding: padding-box,
+        bg-clip-content: content-box,
+        bg-clip-text: text,
+);
+
+@each $key, $value in $bg-clips {
+    .#{$key} {
+        background-clip: $value !important;
+    }
+}
+
+

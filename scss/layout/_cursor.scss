@@ -1,0 +1,38 @@
+/*
+    Cursor Events
+*/
+
+$cursor-events: (
+    'cursor-pointer': pointer,
+    'cursor-default': default,
+    'cursor-help': help,
+    'cursor-progress': progress,
+    'cursor-not-allowed': not-allowed,
+    'cursor-move': move,
+    'cursor-auto': auto,
+    'cursor-grab': grab,
+    'cursor-grabbing': grabbing,
+    'cursor-text': text,
+    'cursor-wait': wait,
+    'cursor-ns-resize': ns-resize,
+    'cursor-ew-resize': ew-resize,
+    'cursor-nesw-resize': nesw-resize,
+    'cursor-nwse-resize': nwse-resize,
+    'cursor-col-resize': col-resize,
+    'cursor-row-resize': row-resize,
+    'cursor-all-scroll': all-scroll,
+    'cursor-zoom-in': zoom-in,
+    'cursor-zoom-out': zoom-out,
+    'cursor-cell': cell,
+    'cursor-vertical-text': vertical-text,
+    'cursor-context-menu': context-menu,
+    'cursor-alias': alias,
+    'cursor-copy': copy,
+    'cursor-no-drop': no-drop,
+);
+
+@each $key, $value in $cursor-events {
+    .#{$key} {
+        cursor: $value;
+    }
+}

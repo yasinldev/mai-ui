@@ -1,0 +1,221 @@
+/*
+    flex items
+*/
+
+$flex-basis: (
+    'auto': auto,
+    'fill': 0,
+    'max-content': max-content,
+    'min-content': min-content,
+    'available': available,
+    'fit-content': fit-content,
+    1: 1,
+    2: 2,
+    3: 3,
+    4: 4,
+    5: 5,
+    6: 6,
+    7: 7,
+    8: 8,
+    9: 9,
+    10: 10,
+    11: 11,
+    12: 12,
+    14: 14,
+    16: 16,
+    20: 20,
+    'px': 1px,
+);
+
+@each $key, $value in $flex-basis {
+    .flex-#{$key} {
+        flex: $value;
+    }
+}
+
+$flex-direction: (
+    'row': row,
+    'row-reverse': row-reverse,
+    'column': column,
+    'column-reverse': column-reverse,
+);
+
+@each $key, $value in $flex-direction {
+    .flex-#{$key} {
+        flex-direction: $value;
+    }
+}
+
+$flex-wrap: (
+    'nowrap': nowrap,
+    'wrap': wrap,
+    'wrap-reverse': wrap-reverse,
+);
+
+@each $key, $value in $flex-wrap {
+    .flex-#{$key} {
+        flex-wrap: $value;
+    }
+}
+
+$flex: (
+    1: 1 1 0%,
+    'auto': 1 1 auto,
+    'initial': 0 1 auto,
+    'none': none,
+    'grow': 1 0 auto,
+);
+
+@each $key, $value in $flex {
+    .flex-#{$key} {
+        flex: $value;
+    }
+}
+
+$flex-grow: (
+    0: 0,
+    1: 1,
+);
+
+@each $key, $value in $flex-grow {
+    .flex-grow-#{$key} {
+        flex-grow: $value;
+    }
+}
+
+$flex-shrink: (
+    0: 0,
+    1: 1,
+);
+
+@each $key, $value in $flex-shrink {
+    .flex-shrink-#{$key} {
+        flex-shrink: $value;
+    }
+}
+
+$flex-order: (
+    0: 0,
+    1: 1,
+    2: 2,
+    3: 3,
+    4: 4,
+    5: 5,
+    6: 6,
+    7: 7,
+    8: 8,
+    9: 9,
+    10: 10,
+    11: 11,
+    12: 12,
+    'first': -1,
+    'last': 99999,
+);
+
+@each $key, $value in $flex-order {
+    .flex-order-#{$key} {
+        order: $value;
+    }
+}
+
+$justify-self: (
+    'auto': auto,
+    'stretch': stretch,
+    'center': center,
+    'start': start,
+    'end': end,
+);
+
+$justify-items: (
+    'start': start,
+    'end': end,
+    'center': center,
+    'stretch': stretch,
+);
+
+@each $key, $value in $justify-items {
+    .justify-items-#{$key} {
+        justify-items: $value;
+    }
+}
+
+@each $key, $value in $justify-self {
+    .justify-self-#{$key} {
+        justify-self: $value;
+    }
+}
+
+$align-contents: (
+    'normal': normal,
+    'end': flex-end,
+    'start': flex-start,
+    'center': center,
+    'stretch': stretch,
+    'space-between': space-between,
+    'space-around': space-around,
+    'space-evenly': space-evenly,
+    'baseline': baseline,
+);
+
+@each $key, $value in $align-contents {
+    .align-content-#{$key} {
+        align-content: $value;
+    }
+}
+
+$align-items: (
+    'start': flex-start,
+    'end': flex-end,
+    'center': center,
+    'stretch': stretch,
+    'baseline': baseline,
+);
+
+@each $key, $value in $align-items {
+    .align-items-#{$key} {
+        align-items: $value;
+    }
+}
+
+$align-self: (
+    'auto': auto,
+    'start': flex-start,
+    'end': flex-end,
+    'center': center,
+    'stretch': stretch,
+    'baseline': baseline,
+);
+
+@each $key, $value in $align-self {
+    .align-self-#{$key} {
+        align-self: $value;
+    }
+}
+
+$place-items: (
+    'stretch': stretch,
+    'center': center,
+    'start': start,
+    'end': end,
+    'baseline': baseline,
+);
+
+@each $key, $value in $place-items {
+    .place-items-#{$key} {
+        place-items: $value;
+    }
+}
+
+$place-self: (
+    'auto': auto,
+    'stretch': stretch,
+    'center': center,
+    'start': start,
+    'end': end,
+);
+
+@each $key, $value in $place-self {
+    .place-self-#{$key} {
+        place-self: $value;
+    }
+}

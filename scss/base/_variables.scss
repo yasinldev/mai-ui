@@ -20,14 +20,81 @@
 */
 
 // Main Colors
-$primary-color: #128dff;
-$secondary-color: #777986;
-$success-color: #049b63;
-$info-color: #4ba3f5;;
-$warning-color: #b78011;
-$error-color: #b23428;
-$default-light-color: #fff;
-$default-dark-color: #5a5c69;
+$primary-color: #007BFF;
+$secondary-color: #6C757D;
+$success-color: #28A745;
+$info-color:  #17A2B8;
+$warning-color: #FFC107;
+$error-color: #DC3545;
+$default-light-color: #F8F9FA;
+$default-dark-color: #343A40;
+
+// alternative colors
+$tomato-color: #FF6347;
+$orange-color: #FF7F50;
+$hotpink-color: #FF69B4;
+$coral-color: #FF7F50;
+$darkorange-color: #FF8C00;
+$lightsalmon-color: #FFA07A;
+$lightpink-color: #FFB6C1;
+$peachpuff-color: #FFDAB9;
+$navajowhite-color: #FFDEAD;
+$khaki-color: #F0E68C;
+$gold-color: #FFD700;
+$yellow-color: #FFFF00;
+$lightyellow-color: #FFFFE0;
+$lemonchiffon-color: #FFFACD;
+$lightgoldenrodyellow-color: #FAFAD2;
+$papayawhip-color: #FFEFD5;
+$moccasin-color: #FFE4B5;
+
+$primary-color-100: #cce5ff;
+$primary-color-200: #99ccff;
+$primary-color-300: #66b2ff;
+$primary-color-400: #3399ff;
+$primary-color-500: #007bff;
+$primary-color-600: #0066cc;
+$primary-color-700: #004c99;
+
+$secondary-color-100: #e6ecf0;
+$secondary-color-200: #ccd9e5;
+$secondary-color-300: #b3c6db;
+$secondary-color-400: #99b3d0;
+$secondary-color-500: #809fc6;
+$secondary-color-600: #668cbf;
+$secondary-color-700: #4d79b8;
+
+$success-color-100: #d1e7dd;
+$success-color-200: #a3cfbb;
+$success-color-300: #75b798;
+$success-color-400: #47a775;
+$success-color-500: #28a745;
+$success-color-600: #1f8a5e;
+$success-color-700: #176d47;
+
+$info-color-100: #d0ecf5;
+$info-color-200: #a1d9eb;
+$info-color-300: #73c6e1;
+$info-color-400: #44b3d7;
+$info-color-500: #17a2b8;
+$info-color-600: #128a95;
+$info-color-700: #0d6d71;
+
+$warning-color-100: #fff3cd;
+$warning-color-200: #ffe6b3;
+$warning-color-300: #ffda99;
+$warning-color-400: #ffcc7f;
+$warning-color-500: #ffc107;
+$warning-color-600: #e6a100;
+$warning-color-700: #b38600;
+
+$error-color-100: #f8d7da;
+$error-color-200: #f1afbb;
+$error-color-300: #ea879c;
+$error-color-400: #e3607d;
+$error-color-500: #dc3545;
+$error-color-600: #b02a37;
+$error-color-700: #842029;
 
     // Text Colors
 $heading-color: #333;
@@ -38,7 +105,7 @@ $hr-color: #e8e8e8;
 
 // Background Colors
 $body-background-color: #fff;
-$component-background-color: #f8f9fc;
+$component-background-color:#f0f0f0;
 $disabled-background-color: #a1a0a0;
 
 // Border Colors
@@ -48,12 +115,6 @@ $border-color-split: #e8e8e8;
 // Link Colors
 $link-color: $primary-color;
 $link-hover-color: darken($link-color, 60%);
-
-// Button Colors
-$btn-primary-bg: $primary-color;
-$btn-primary-color: #fff;
-$btn-danger-bg: $error-color;
-$btn-danger-color: #fff;
 
 // Form Colors
 $input-border-color: $border-color-base;
@@ -116,30 +177,3 @@ $link-hover-decoration: pointer;
 $list-style: none;
 $list-style-position: inside;
 $list-style-type: disc;
-
-// border-radius
-
-$border-radius-breakpoints: (
-    rounded-1: 0.25rem,
-    rounded-2: 0.5rem,
-    rounded-3: 1rem,
-    rounded-4: 1.5rem,
-    rounded-5: 3rem,
-    rounded-6: 4rem,
-    rounded-7: 5rem,
-    rounded-8: 6rem,
-    rounded-9: 7rem,
-    rounded-10: 8rem,
-    rounded-circle: 100%,
-    rounded-pill: 50rem,
-    rounded-top: 0 0 0.25rem 0.25rem,
-    rounded-right: 0.25rem 0 0 0.25rem,
-    rounded-bottom: 0.25rem 0.25rem 0 0,
-    rounded-left: 0 0.25rem 0.25rem 0,
-);
-
-@each $name, $radius in $border-radius-breakpoints {
-    .#{$name}{
-        border-radius: $radius !important;
-    }
-}

@@ -1,7 +1,5 @@
-/**
-    cards
------------------------------
-    developed by @yasinldev
+/*
+    Dropdown
 */
 /**
     Utilities
@@ -807,90 +805,63 @@
   font-weight: 700 !important;
 }
 
-.mai-card-fit {
+.mai-dropdown {
   position: relative;
-  background-color: #FFFAFA;
-  width: fit-content;
+  display: inline-block;
+  cursor: pointer;
+  user-select: none;
+  margin-right: 10px;
+}
+.mai-dropdown .dropdown-menu {
+  width: 150px;
+  z-index: 1000;
+  display: flex;
+  flex-direction: column;
   border-radius: calc(0.25rem + 2px);
-  padding: 12px;
-  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
-}
-
-.mai-card-sm {
-  position: relative;
-  background-color: #FFFAFA;
-  width: 300px;
-  border-radius: calc(0.25rem + 2px);
-  padding: 12px;
-  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
-}
-
-.mai-card-default {
-  position: relative;
-  background-color: #FFFAFA;
-  width: 400px;
-  border-radius: calc(0.25rem + 2px);
-  padding: 12px;
-  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
-}
-
-.mai-card-lg {
-  position: relative;
-  background-color: #FFFAFA;
-  width: 500px;
-  border-radius: calc(0.25rem + 2px);
-  padding: 12px;
-  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
-}
-
-.mai-card-xl {
-  position: relative;
-  background-color: #FFFAFA;
-  width: 600px;
-  border-radius: calc(0.25rem + 2px);
-  padding: 12px;
-  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
-}
-
-.mai-card-full {
-  position: relative;
-  background-color: #FFFAFA;
-  width: 10 0%;
-  border-radius: calc(0.25rem + 2px);
-  padding: 12px;
-  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
-}
-
-.mai-card-group {
-  display: inline-flex !important;
-  flex-wrap: wrap;
-}
-.mai-card-group .mai-card-default, .mai-card-group .mai-card-sm, .mai-card-group .mai-card-md, .mai-card-group .mai-card-lg, .mai-card-group .mai-card-xl, .mai-card-group .mai-card-full {
-  margin: 0.5em;
-}
-
-.card-header {
+  top: 60px;
+  user-select: none;
+  margin-right: 10px;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2);
+  position: absolute;
+  transition: all 0.2s ease-in-out;
+  backdrop-filter: blur(5px);
   padding: 8px;
+}
+.mai-dropdown .dropdown-menu .dropdown-title {
+  padding: 0.25rem 1.5rem;
+  font-weight: 600;
+  color: #777986;
+  background-color: transparent;
   border-bottom: 1px solid #f0f0f0;
 }
-
-.card-footer {
-  padding: 8px;
-  border-top: 1px solid #f0f0f0;
+.mai-dropdown .dropdown-menu .dropdown-item {
+  display: flex;
+  width: 100%;
+  padding: 0.25rem 1.5rem;
+  clear: both;
+  font-weight: 400;
+  color: #212529;
+  background-color: transparent;
+  border: 0;
+  text-decoration: none;
+  transition: all 0.2s ease-in-out;
+  border-radius: calc(0.25rem + 2px);
+}
+.mai-dropdown .dropdown-menu .dropdown-item:hover, .mai-dropdown .dropdown-menu .dropdown-item:focus {
+  color: #16181b;
+  text-decoration: none;
+  background-color: #deefff;
+}
+.mai-dropdown .dropdown-menu .dropdown-item .dropdown-link {
+  display: flex;
+}
+@media screen and (max-width: 850px) {
+  .mai-dropdown .dropdown-menu {
+    right: 0;
+  }
+}
+.mai-dropdown.dropdown-active .dropdown-menu {
+  display: flex;
 }
 
-.card-img {
-  object-fit: cover;
-}
-
-.card-title {
-  font-size: 16px;
-  font-weight: 600;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
-}
-
-.card-body {
-  padding: 8px;
-}
-
-/*# sourceMappingURL=_cards.css.map */
+/*# sourceMappingURL=_dropdown.css.map */

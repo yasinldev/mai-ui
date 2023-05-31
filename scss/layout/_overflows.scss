@@ -1,0 +1,44 @@
+/*
+    Overflows
+*/
+
+
+$overflow: (
+        overflow-auto: auto,
+        overflow-hidden: hidden,
+        overflow-visible: visible,
+        overflow-scroll: scroll,
+        overflow-x-auto: auto,
+        overflow-y-auto: auto,
+        overflow-x-hidden: hidden,
+        overflow-y-hidden: hidden,
+        overflow-x-visible: visible,
+        overflow-y-visible: visible,
+        overflow-x-scroll: scroll,
+        overflow-y-scroll: scroll,
+);
+
+@each $key, $value in $overflow {
+    .#{$key} {
+        overflow: $value !important;
+    }
+}
+
+$overscroll: (
+        overscroll-auto: auto,
+        overscroll-contain: contain,
+        overscroll-none: none,
+        overscroll-y-auto: auto,
+        overscroll-y-contain: contain,
+        overscroll-y-none: none,
+        overscroll-x-auto: auto,
+        overscroll-x-contain: contain,
+        overscroll-x-none: none,
+);
+
+@each $key, $value in $overscroll {
+    .#{$key} {
+        overscroll-behavior: $value !important;
+    }
+}
+

@@ -2,8 +2,6 @@
 // ----------------
 // developed by @yasinldev, @KeazoN
 
-@import "./../base/_variables.scss";
-
 $navbar-background-color: #f0f0f0;
 $bottom-border-color: #d0d0d0;
 
@@ -163,6 +161,7 @@ $bottom-border-color: #d0d0d0;
     }
 
     .navbar-toggled {
+        z-index: 999;
         display: flex !important;
         flex-direction: column !important;
         align-items: center;

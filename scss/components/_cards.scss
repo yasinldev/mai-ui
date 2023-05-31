@@ -4,27 +4,25 @@
     developed by @yasinldev
 */
 
-@import "./../base/_variables.scss";
-
-$card-border-color: $secondary-color;
+$card-border-color: #f0f0f0;
 
 $card-size-breakpoints: (
-    'default': fit-content,
+    'fit': fit-content,
     'sm': 300px,
-    'md': 500px,
-    'lg': 700px,
-    'xl': 900px,
-    'full': 100%,
+    'default': 400px,
+    'lg': 500px,
+    'xl': 600px,
+    'full': 10  0%,
 );
 
 @each $key, $values in $card-size-breakpoints {
     .mai-card-#{$key} {
         position: relative;
-        background-color: $component-background-color;
-        max-width: $values;
+        background-color: #FFFAFA;
+        width: $values;
         border-radius: calc(map-get($border-radius-breakpoints, 'rounded-1') + 2px);
         padding: $padding-sm;
-        box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2);
+        box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
     }
 }
 
@@ -39,12 +37,12 @@ $card-size-breakpoints: (
 
 .card-header {
     padding: $padding-xs;
-    border-bottom: 1px solid #f0f0f0;
+    border-bottom: 1px solid $card-border-color;
 }
 
 .card-footer{
     padding: $padding-xs;
-    border-top: 1px solid #f0f0f0;
+    border-top: 1px solid $card-border-color;
 }
 
 .card-img{

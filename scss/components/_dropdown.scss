@@ -1,0 +1,72 @@
+/*
+    Dropdown
+*/
+
+.mai-dropdown {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    user-select: none;
+    margin-right: 10px;
+
+    .dropdown-menu {
+        width: 150px;
+        z-index: 1000;
+        display: flex;
+        flex-direction: column;
+        border-radius: calc(map-get($border-radius-breakpoints, 'rounded-1') + 2px);
+        top: 60px;
+        user-select: none;
+        margin-right: 10px;
+        box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2);
+        position: absolute;
+        transition: all 0.2s ease-in-out;
+        backdrop-filter: blur(5px);
+        padding: $padding-xs;
+
+        .dropdown-title {
+            padding: 0.25rem 1.5rem;
+            font-weight: $font-weight-bold;
+            color: $secondary-color;
+            background-color: transparent;
+            border-bottom: 1px solid #f0f0f0;
+        }
+
+        .dropdown-item {
+            display: flex;
+            width: 100%;
+            padding: 0.25rem 1.5rem;
+            clear: both;
+            font-weight: 400;
+            color: #212529;
+            background-color: transparent;
+            border: 0;
+            text-decoration: none;
+            transition: all 0.2s ease-in-out;
+            border-radius: calc(map-get($border-radius-breakpoints, 'rounded-1') + 2px);
+
+            &:hover, &:focus {
+                color: #16181b;
+                text-decoration: none;
+                background-color: lighten($primary-color, 40%);
+            }
+
+            .dropdown-link {
+                display: flex;
+            }
+        }
+    }
+
+    @media screen and (max-width: 850px) {
+        .dropdown-menu {
+            right: 0;
+        }
+    }
+
+    &.dropdown-active {
+        .dropdown-menu {
+            display: flex;
+
+        }
+    }
+}

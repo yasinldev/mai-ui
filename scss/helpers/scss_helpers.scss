@@ -10,11 +10,6 @@
   @return mix($color, #3c3c3c, $amount);
 }
 
-// defining function for rgba
-@function rgba($color, $alpha) {
-  @return rgba(red($color), green($color), blue($color), $alpha);
-}
-
 // defining function for rem and em
 @function rem($pixels, $base: 16px) {
   @return calc(($pixels / $base) * 1rem);

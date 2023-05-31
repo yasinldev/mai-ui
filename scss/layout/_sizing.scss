@@ -1,0 +1,123 @@
+/*
+    Sizing
+*/
+
+$default-size: 0.25rem !default;
+$default-size-percent-12: calc(100% / 12) !default;
+$default-size-percent-6: calc(100% / 6) !default;
+$default-size-percent-4: calc(100% / 4) !default;
+$default-size-percent-2: calc(100% / 2) !default;
+$auto-size: auto !default;
+
+@for $i from 0 through 20 {
+    .w-#{$i} {
+        width: $i * $default-size;
+    }
+    .h-#{$i} {
+        height: $i * $default-size;
+    }
+    .min-w-#{$i} {
+        min-width: $i * $default-size;
+    }
+    .min-h-#{$i} {
+        min-height: $i * $default-size;
+    }
+    .max-w-#{$i} {
+        max-width: $i * $default-size;
+    }
+    .max-h-#{$i} {
+        max-height: $i * $default-size;
+    }
+}
+
+@for $i from 0 through 12 {
+    .w-#{$i}-per-12 {
+        width: $default-size-percent-12 * $i;
+    }
+    .h-#{$i}-per-12 {
+        height: $default-size-percent-12 * $i;
+    }
+}
+
+@for $i from 0 through 6 {
+    .w-#{$i}-per-6 {
+        width: $default-size-percent-6 * $i;
+    }
+    .h-#{$i}-per-6 {
+        height: $default-size-percent-6 * $i;
+    }
+}
+
+@for $i from 0 through 4 {
+    .w-#{$i}-per-4 {
+        width: $default-size-percent-4 * $i;
+    }
+    .h-#{$i}-per-4 {
+        height: $default-size-percent-4 * $i;
+    }
+}
+
+@for $i from 0 through 2 {
+    .w-#{$i}-per-2 {
+        width: $default-size-percent-4 * $i;
+    }
+    .h-#{$i}-per-2 {
+        height: $default-size-percent-4 * $i;
+    }
+}
+
+.w-auto {
+    width: $auto-size;
+}
+.h-auto {
+    height: $auto-size;
+}
+.min-w-auto {
+    min-width: $auto-size;
+}
+.min-h-auto {
+    min-height: $auto-size;
+}
+.max-w-auto {
+    max-width: $auto-size;
+}
+.max-h-auto {
+    max-height: $auto-size;
+}
+
+.w-full {
+    width: 100%;
+}
+.h-full {
+    height: 100%;
+}
+.w-screen {
+    width: 100vw;
+}
+.h-screen {
+    height: 100vh;
+}
+
+.w-min-content {
+    width: min-content;
+}
+
+.w-max-content {
+    width: max-content;
+}
+
+.h-min-content {
+    height: min-content;
+}
+
+.h-max-content {
+    height: max-content;
+}
+
+.w-fit-content {
+    width: fit-content;
+}
+
+.h-fit-content {
+    height: fit-content;
+}

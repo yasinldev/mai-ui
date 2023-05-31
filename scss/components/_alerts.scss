@@ -1,0 +1,26 @@
+/*
+    Alerts
+*/
+.mai-alert {
+    padding: $padding-sm;
+    border-radius: calc(map-get($border-radius-breakpoints, 'rounded-1') + 2px);
+    margin-bottom: $margin-sm;
+    transition: all 0.3s ease-in-out;
+
+    .alert-title {
+        font-weight: $font-weight-bold;
+        margin-bottom: $margin-sm;
+
+    }
+
+    .alert-description {
+        font-size: $font-size-sm;
+        font-weight: $font-weight-normal;
+        margin-bottom: $margin-sm;
+    }
+
+    .alert-dismiss {
+        font-weight: $font-weight-bold;
+        cursor: pointer;
+    }
+}

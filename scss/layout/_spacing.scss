@@ -1,0 +1,137 @@
+/*
+    Spacing
+*/
+
+$default-spacing: 0.25rem !default;
+$auto-spacing: auto !default;
+
+@for $i from 0 through 20 {
+    .m-#{$i} {
+        margin: $i * $default-spacing;
+    }
+    .mx-#{$i} {
+        margin-left: $i * $default-spacing;
+        margin-right: $i * $default-spacing;
+    }
+    .my-#{$i} {
+        margin-top: $i * $default-spacing;
+        margin-bottom: $i * $default-spacing;
+    }
+    .mt-#{$i} {
+        margin-top: $i * $default-spacing;
+    }
+    .mr-#{$i} {
+        margin-right: $i * $default-spacing;
+    }
+    .mb-#{$i} {
+        margin-bottom: $i * $default-spacing;
+    }
+    .ml-#{$i} {
+        margin-left: $i * $default-spacing;
+    }
+    .p-#{$i} {
+        padding: $i * $default-spacing;
+    }
+    .px-#{$i} {
+        padding-left: $i * $default-spacing;
+        padding-right: $i * $default-spacing;
+    }
+    .py-#{$i} {
+        padding-top: $i * $default-spacing;
+        padding-bottom: $i * $default-spacing;
+    }
+    .pt-#{$i} {
+        padding-top: $i * $default-spacing;
+    }
+    .pr-#{$i} {
+        padding-right: $i * $default-spacing;
+    }
+    .pb-#{$i} {
+        padding-bottom: $i * $default-spacing;
+    }
+    .pl-#{$i} {
+        padding-left: $i * $default-spacing;
+    }
+}
+
+.m-auto {
+    margin: $auto-spacing;
+}
+.mx-auto {
+    margin-left: $auto-spacing;
+    margin-right: $auto-spacing;
+}
+.my-auto {
+    margin-top: $auto-spacing;
+    margin-bottom: $auto-spacing;
+}
+.mt-auto {
+    margin-top: $auto-spacing;
+}
+.mr-auto {
+    margin-right: $auto-spacing;
+}
+.mb-auto {
+    margin-bottom: $auto-spacing;
+}
+.ml-auto {
+    margin-left: $auto-spacing;
+}
+.p-auto {
+    padding: $auto-spacing;
+}
+.px-auto {
+    padding-left: $auto-spacing;
+    padding-right: $auto-spacing;
+}
+.py-auto {
+    padding-top: $auto-spacing;
+    padding-bottom: $auto-spacing;
+}
+.pt-auto {
+    padding-top: $auto-spacing;
+}
+.pr-auto {
+    padding-right: $auto-spacing;
+}
+.pb-auto {
+    padding-bottom: $auto-spacing;
+}
+.pl-auto {
+    padding-left: $auto-spacing;
+}
+
+// Space between child elements
+
+@for $i from 0 through 20 {
+    .space-x-#{$i} {
+        > * {
+            &:not(:last-child) {
+                margin-left: $i * $default-spacing;
+            }
+        }
+    }
+    .space-y-#{$i} {
+        > * {
+            &:not(:first-child) {
+                margin-top: $i * $default-spacing;
+            }
+        }
+    }
+}
+
+.space-x-px {
+    > * {
+        &:not(:last-child) {
+            margin-left: 1px;
+        }
+    }
+}
+
+.space-y-px {
+    > * {
+        &:not(:first-child) {
+            margin-top: 1px;
+        }
+    }
+}

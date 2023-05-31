@@ -6,15 +6,12 @@
     TODO: SOLID BUTTONS! (DONE)
 */
 
-@import './../base/variables.scss';
 
 $buttons-size-breakpoints: (
     'sm': 28px,
     'default': 34px,
     'lg': 42px,
 );
-
-$ripple-duration: 0.3s;
 
 @mixin define-button-clicked-event{
     &:before {
@@ -117,18 +114,18 @@ $set-color: $default-light-color;
         border: 1px solid $value;
 
         &:hover {
-            background-color: lighten($value, 10%);
-            border-color: lighten($value, 10%);
+            background-color: lighten($value, 90%);
+            border-color: lighten($value, 90%);
             @if(#{$key} == 'light'){
-                color: darken($default-dark-color, 10%);
+                color: darken($default-dark-color, 90%);
             } @else {
-                color: darken($default-light-color, 10%);
+                color: darken($default-light-color, 90%);
             }
         }
 
         &:active {
-            background-color: darken($value, 10%);
-            border-color: darken($value, 10%);
+            background-color: darken($value, 90%);
+            border-color: darken($value, 90%);
         }
     }
 }
@@ -146,18 +143,18 @@ $set-color: $default-light-color;
 
         &:hover {
             @if(#{$key} == 'light'){
-                color: lighten($default-dark-color, 20%);
-                border-color: lighten($default-dark-color, 20%);
+                color: lighten($default-dark-color, 80%);
+                border-color: lighten($default-dark-color, 80%);
             } @else {
-                border-color: lighten($values, 20%);
-                color: lighten($values, 20%);
+                border-color: lighten($values, 80%);
+                color: lighten($values, 80%);
             }
             background-color: transparent;
         }
 
         &:active {
-            border-color: darken($values, 10%);
-            color: darken($values, 10%);
+            border-color: darken($values, 90%);
+            color: darken($values, 90%);
             background-color: transparent;
         }
     }
@@ -211,7 +208,8 @@ $set-color: $default-light-color;
     }
 }
 // wave animation
-$wave-color: rgba(0, 0, 0, 0.3);
+$color: #000;
+$wave-color: rgba($color, 0.3);
 $transition-duration: 0.5s;
 
 .disabled{

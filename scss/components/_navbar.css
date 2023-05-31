@@ -214,6 +214,7 @@
     display: none !important;
   }
   .navbar-toggled {
+    z-index: 999;
     display: flex !important;
     flex-direction: column !important;
     align-items: center;

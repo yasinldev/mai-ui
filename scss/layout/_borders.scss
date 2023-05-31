@@ -1,0 +1,389 @@
+/*
+    Borders
+*/
+
+$border-colors: (
+        border-primary: $primary-color,
+        border-secondary: $secondary-color,
+        border-success: $success-color,
+        border-info: $info-color,
+        border-warning: $warning-color,
+        border-error: $error-color,
+        border-light: $default-light-color,
+        border-dark: $default-dark-color,
+
+        border-primary-100: $primary-color-100,
+        border-primary-200: $primary-color-200,
+        border-primary-300: $primary-color-300,
+        border-primary-400: $primary-color-400,
+        border-primary-500: $primary-color-500,
+        border-primary-600: $primary-color-600,
+        border-primary-700: $primary-color-700,
+
+        border-secondary-100: $secondary-color-100,
+        border-secondary-200: $secondary-color-200,
+        border-secondary-300: $secondary-color-300,
+        border-secondary-400: $secondary-color-400,
+        border-secondary-500: $secondary-color-500,
+        border-secondary-600: $secondary-color-600,
+        border-secondary-700: $secondary-color-700,
+
+        border-success-100: $success-color-100,
+        border-success-200: $success-color-200,
+        border-success-300: $success-color-300,
+        border-success-400: $success-color-400,
+        border-success-500: $success-color-500,
+        border-success-600: $success-color-600,
+        border-success-700: $success-color-700,
+
+        border-info-100: $info-color-100,
+        border-info-200: $info-color-200,
+        border-info-300: $info-color-300,
+        border-info-400: $info-color-400,
+        border-info-500: $info-color-500,
+        border-info-600: $info-color-600,
+        border-info-700: $info-color-700,
+
+        border-warning-100: $warning-color-100,
+        border-warning-200: $warning-color-200,
+        border-warning-300: $warning-color-300,
+        border-warning-400: $warning-color-400,
+        border-warning-500: $warning-color-500,
+        border-warning-600: $warning-color-600,
+        border-warning-700: $warning-color-700,
+
+        border-error-100: $error-color-100,
+        border-error-200: $error-color-200,
+        border-error-300: $error-color-300,
+        border-error-400: $error-color-400,
+        border-error-500: $error-color-500,
+        border-error-600: $error-color-600,
+        border-error-700: $error-color-700,
+
+    // alternative colors
+        border-tomato: $tomato-color,
+        border-orange: $orange-color,
+        border-yellow: $yellow-color,
+        border-hotpink: $hotpink-color,
+        border-lightpink: $lightpink-color,
+        border-coral: $coral-color,
+        border-darkorange: $darkorange-color,
+        border-lightsalmon: $lightsalmon-color,
+        border-peachpuff: $peachpuff-color,
+        border-navajowhite: $navajowhite-color,
+        border-khaki: $khaki-color,
+        border-gold: $gold-color,
+        border-lightyellow: $lightyellow-color,
+        border-lemonchiffon: $lemonchiffon-color,
+        border-lightgoldenrodyellow: $lightgoldenrodyellow-color,
+        border-papayawhip: $papayawhip-color,
+        border-moccasin: $moccasin-color,
+);
+
+@each $key, $value in $border-colors {
+    .#{$key} {
+        border: 1px solid $value;
+    }
+}
+
+$border-hovers: (
+        border-hover-primary: $primary-color,
+        border-hover-secondary: $secondary-color,
+        border-hover-success: $success-color,
+        border-hover-info: $info-color,
+        border-hover-warning: $warning-color,
+        border-hover-error: $error-color,
+        border-hover-light: $default-light-color,
+        border-hover-dark: $default-dark-color,
+
+        border-hover-primary-100: $primary-color-100,
+        border-hover-primary-200: $primary-color-200,
+        border-hover-primary-300: $primary-color-300,
+        border-hover-primary-400: $primary-color-400,
+        border-hover-primary-500: $primary-color-500,
+        border-hover-primary-600: $primary-color-600,
+        border-hover-primary-700: $primary-color-700,
+
+        border-hover-secondary-100: $secondary-color-100,
+        border-hover-secondary-200: $secondary-color-200,
+        border-hover-secondary-300: $secondary-color-300,
+        border-hover-secondary-400: $secondary-color-400,
+        border-hover-secondary-500: $secondary-color-500,
+        border-hover-secondary-600: $secondary-color-600,
+        border-hover-secondary-700: $secondary-color-700,
+
+        border-hover-success-100: $success-color-100,
+        border-hover-success-200: $success-color-200,
+        border-hover-success-300: $success-color-300,
+        border-hover-success-400: $success-color-400,
+        border-hover-success-500: $success-color-500,
+        border-hover-success-600: $success-color-600,
+        border-hover-success-700: $success-color-700,
+
+        border-hover-info-100: $info-color-100,
+        border-hover-info-200: $info-color-200,
+        border-hover-info-300: $info-color-300,
+        border-hover-info-400: $info-color-400,
+        border-hover-info-500: $info-color-500,
+        border-hover-info-600: $info-color-600,
+        border-hover-info-700: $info-color-700,
+
+        border-hover-warning-100: $warning-color-100,
+        border-hover-warning-200: $warning-color-200,
+        border-hover-warning-300: $warning-color-300,
+        border-hover-warning-400: $warning-color-400,
+        border-hover-warning-500: $warning-color-500,
+        border-hover-warning-600: $warning-color-600,
+        border-hover-warning-700: $warning-color-700,
+
+        border-hover-error-100: $error-color-100,
+        border-hover-error-200: $error-color-200,
+        border-hover-error-300: $error-color-300,
+        border-hover-error-400: $error-color-400,
+        border-hover-error-500: $error-color-500,
+        border-hover-error-600: $error-color-600,
+        border-hover-error-700: $error-color-700,
+
+        border-hover-tomato: $tomato-color,
+        border-hover-orange: $orange-color,
+        border-hover-yellow: $yellow-color,
+        border-hover-hotpink: $hotpink-color,
+        border-hover-lightpink: $lightpink-color,
+        border-hover-coral: $coral-color,
+        border-hover-darkorange: $darkorange-color,
+        border-hover-lightsalmon: $lightsalmon-color,
+        border-hover-peachpuff: $peachpuff-color,
+        border-hover-navajowhite: $navajowhite-color,
+        border-hover-khaki: $khaki-color,
+        border-hover-gold: $gold-color,
+        border-hover-lightyellow: $lightyellow-color,
+        border-hover-lemonchiffon: $lemonchiffon-color,
+        border-hover-lightgoldenrodyellow: $lightgoldenrodyellow-color,
+        border-hover-papayawhip: $papayawhip-color,
+        border-hover-moccasin: $moccasin-color,
+);
+
+$border-focus: (
+        border-focus-primary: $primary-color,
+        border-focus-secondary: $secondary-color,
+        border-focus-success: $success-color,
+        border-focus-info: $info-color,
+        border-focus-warning: $warning-color,
+        border-focus-error: $error-color,
+        border-focus-light: $default-light-color,
+        border-focus-dark: $default-dark-color,
+
+        border-focus-primary-100: $primary-color-100,
+        border-focus-primary-200: $primary-color-200,
+        border-focus-primary-300: $primary-color-300,
+        border-focus-primary-400: $primary-color-400,
+        border-focus-primary-500: $primary-color-500,
+        border-focus-primary-600: $primary-color-600,
+        border-focus-primary-700: $primary-color-700,
+
+        border-focus-secondary-100: $secondary-color-100,
+        border-focus-secondary-200: $secondary-color-200,
+        border-focus-secondary-300: $secondary-color-300,
+        border-focus-secondary-400: $secondary-color-400,
+        border-focus-secondary-500: $secondary-color-500,
+        border-focus-secondary-600: $secondary-color-600,
+        border-focus-secondary-700: $secondary-color-700,
+
+        border-focus-success-100: $success-color-100,
+        border-focus-success-200: $success-color-200,
+        border-focus-success-300: $success-color-300,
+        border-focus-success-400: $success-color-400,
+        border-focus-success-500: $success-color-500,
+        border-focus-success-600: $success-color-600,
+        border-focus-success-700: $success-color-700,
+
+        border-focus-info-100: $info-color-100,
+        border-focus-info-200: $info-color-200,
+        border-focus-info-300: $info-color-300,
+        border-focus-info-400: $info-color-400,
+        border-focus-info-500: $info-color-500,
+        border-focus-info-600: $info-color-600,
+        border-focus-info-700: $info-color-700,
+
+        border-focus-warning-100: $warning-color-100,
+        border-focus-warning-200: $warning-color-200,
+        border-focus-warning-300: $warning-color-300,
+        border-focus-warning-400: $warning-color-400,
+        border-focus-warning-500: $warning-color-500,
+        border-focus-warning-600: $warning-color-600,
+        border-focus-warning-700: $warning-color-700,
+
+        border-focus-error-100: $error-color-100,
+        border-focus-error-200: $error-color-200,
+        border-focus-error-300: $error-color-300,
+        border-focus-error-400: $error-color-400,
+        border-focus-error-500: $error-color-500,
+        border-focus-error-600: $error-color-600,
+        border-focus-error-700: $error-color-700,
+
+        border-focus-tomato: $tomato-color,
+        border-focus-orange: $orange-color,
+        border-focus-yellow: $yellow-color,
+        border-focus-hotpink: $hotpink-color,
+        border-focus-lightpink: $lightpink-color,
+        border-focus-coral: $coral-color,
+        border-focus-darkorange: $darkorange-color,
+        border-focus-lightsalmon: $lightsalmon-color,
+        border-focus-peachpuff: $peachpuff-color,
+        border-focus-navajowhite: $navajowhite-color,
+        border-focus-khaki: $khaki-color,
+        border-focus-gold: $gold-color,
+        border-focus-lightyellow: $lightyellow-color,
+        border-focus-lemonchiffon: $lemonchiffon-color,
+        border-focus-lightgoldenrodyellow: $lightgoldenrodyellow-color,
+        border-focus-papayawhip: $papayawhip-color,
+        border-focus-moccasin: $moccasin-color,
+);
+
+$border-active: (
+        border-active-primary: $primary-color,
+        border-active-secondary: $secondary-color,
+        border-active-success: $success-color,
+        border-active-info: $info-color,
+        border-active-warning: $warning-color,
+        border-active-error: $error-color,
+        border-active-light: $default-light-color,
+        border-active-dark: $default-dark-color,
+
+        border-active-primary-100: $primary-color-100,
+        border-active-primary-200: $primary-color-200,
+        border-active-primary-300: $primary-color-300,
+        border-active-primary-400: $primary-color-400,
+        border-active-primary-500: $primary-color-500,
+        border-active-primary-600: $primary-color-600,
+        border-active-primary-700: $primary-color-700,
+
+        border-active-secondary-100: $secondary-color-100,
+        border-active-secondary-200: $secondary-color-200,
+        border-active-secondary-300: $secondary-color-300,
+        border-active-secondary-400: $secondary-color-400,
+        border-active-secondary-500: $secondary-color-500,
+        border-active-secondary-600: $secondary-color-600,
+        border-active-secondary-700: $secondary-color-700,
+
+        border-active-success-100: $success-color-100,
+        border-active-success-200: $success-color-200,
+        border-active-success-300: $success-color-300,
+        border-active-success-400: $success-color-400,
+        border-active-success-500: $success-color-500,
+        border-active-success-600: $success-color-600,
+        border-active-success-700: $success-color-700,
+
+        border-active-info-100: $info-color-100,
+        border-active-info-200: $info-color-200,
+        border-active-info-300: $info-color-300,
+        border-active-info-400: $info-color-400,
+        border-active-info-500: $info-color-500,
+        border-active-info-600: $info-color-600,
+        border-active-info-700: $info-color-700,
+
+        border-active-warning-100: $warning-color-100,
+        border-active-warning-200: $warning-color-200,
+        border-active-warning-300: $warning-color-300,
+        border-active-warning-400: $warning-color-400,
+        border-active-warning-500: $warning-color-500,
+        border-active-warning-600: $warning-color-600,
+        border-active-warning-700: $warning-color-700,
+
+        border-active-error-100: $error-color-100,
+        border-active-error-200: $error-color-200,
+        border-active-error-300: $error-color-300,
+        border-active-error-400: $error-color-400,
+        border-active-error-500: $error-color-500,
+        border-active-error-600: $error-color-600,
+        border-active-error-700: $error-color-700,
+
+        border-active-tomato: $tomato-color,
+        border-active-orange: $orange-color,
+        border-active-yellow: $yellow-color,
+        border-active-hotpink: $hotpink-color,
+        border-active-lightpink: $lightpink-color,
+        border-active-coral: $coral-color,
+        border-active-darkorange: $darkorange-color,
+        border-active-lightsalmon: $lightsalmon-color,
+        border-active-peachpuff: $peachpuff-color,
+        border-active-navajowhite: $navajowhite-color,
+        border-active-khaki: $khaki-color,
+        border-active-gold: $gold-color,
+        border-active-lightyellow: $lightyellow-color,
+        border-active-lemonchiffon: $lemonchiffon-color,
+        border-active-lightgoldenrodyellow: $lightgoldenrodyellow-color,
+        border-active-papayawhip: $papayawhip-color,
+        border-active-moccasin: $moccasin-color,
+);
+
+@each $key, $value in $border-active {
+    .#{$key} {
+        &:active {
+            border: 1px solid $value;
+        }
+    }
+}
+
+@each $key, $value in $border-focus {
+    .#{$key} {
+        &:focus {
+            border: 1px solid $value;
+        }
+    }
+}
+
+@each $key, $value in $border-hovers {
+    .#{$key} {
+        &:hover {
+            border: 1px solid $value;
+        }
+    }
+}
+
+$border-widths: (
+        border-1: 1px,
+        border-2: 2px,
+        border-3: 3px,
+        border-4: 4px,
+        border-5: 5px,
+        border-6: 6px,
+        border-7: 7px,
+        border-8: 8px,
+        border-9: 9px,
+);
+
+@each $key, $value in $border-widths {
+    .#{$key} {
+        border-width: $value !important;
+    }
+}
+
+$border-radius-breakpoints: (
+        rounded-1: 0.25rem,
+        rounded-2: 0.5rem,
+        rounded-3: 1rem,
+        rounded-4: 1.5rem,
+        rounded-5: 3rem,
+        rounded-6: 4rem,
+        rounded-7: 5rem,
+        rounded-8: 6rem,
+        rounded-9: 7rem,
+        rounded-10: 8rem,
+        rounded-circle: 100%,
+        rounded-pill: 50rem,
+        rounded-top: 0 0 0.25rem 0.25rem,
+        rounded-right: 0.25rem 0 0 0.25rem,
+        rounded-bottom: 0.25rem 0.25rem 0 0,
+        rounded-left: 0 0.25rem 0.25rem 0,
+);
+
+@each $name, $radius in $border-radius-breakpoints {
+    .#{$name}{
+        border-radius: $radius !important;
+    }
+}
+
+// Border Width
+
+$default-border-width: 1px;

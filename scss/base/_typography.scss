@@ -238,18 +238,6 @@ sup { top: -0.5em; }
 sub { bottom: -0.25em; }
 samp { font-family: $font-family-mono; }
 
-.text-center {
-  text-align: center;
-}
-
-.text-left {
-  text-align: left;
-}
-
-.text-right {
-  text-align: right;
-}
-
 hr {
   margin: $margin-md 0;
   border: 0;
@@ -263,6 +251,3 @@ hr {
   hyphens: auto;
 }
 
-button{
-
-}

@@ -9,105 +9,6 @@
 $auto: auto !default;
 @import "./../base/_variables.scss";
 
-// Creating Margin breakpoints
-$mai-margin-breakpoints: (
-    0.25rem,
-    0.5rem,
-    1rem,
-    1.5rem,
-    3rem,
-    4.5rem,
-);
-
-@mixin define-margin-classes {
-    @if(#{$auto} == "auto"){
-        .mb-#{$auto}, .mt-#{$auto}, .ml-#{$auto}, .mr-#{$auto}{
-            margin: auto;
-        }
-    }
-
-    $margin-length: length($mai-margin-breakpoints);
-
-    @for $i from 1 through $margin-length{
-        .mb-#{$i}{
-            margin-bottom: nth($mai-margin-breakpoints, $i);
-        }
-        .mt-#{$i}{
-            margin-top: nth($mai-margin-breakpoints, $i);
-        }
-        .ml-#{$i}{
-            margin-left: nth($mai-margin-breakpoints, $i);
-        }
-        .mr-#{$i}{
-            margin-right: nth($mai-margin-breakpoints, $i);
-        }
-    }
-}
-
-// Creating Padding breakpoints
-$mai-padding-breakpoints: (
-    0.25rem,
-    0.5rem,
-    1rem,
-    1.5rem,
-    3rem,
-    4.5rem,
-);
-
-$padding-length: length($mai-padding-breakpoints);
-
-@for $i from 1 through $padding-length{
-    .pr-#{$i}{
-        padding-right: nth($mai-padding-breakpoints, $i);
-    }
-    .pl-#{$i}{
-        padding-left: nth($mai-padding-breakpoints, $i);
-    }
-    .pb-#{$i}{
-        padding-bottom: nth($mai-padding-breakpoints, $i);
-    }
-    .pt-#{$i}{
-        padding-top: nth($mai-padding-breakpoints, $i);
-    }
-}
-
-// Creating Width breakpoints
-$mai-width-breakpoints: (
-    w-1: 1rem,
-    w-2: 2rem,
-    w-3: 4rem,
-    w-4: 8rem,
-    w-5: 16rem,
-    w-6: 32rem,
-    w-7: 48rem,
-    w-8: 64rem,
-    w-9: 96rem,
-);
-
-@each $key, $value in $mai-width-breakpoints {
-    .#{$key} {
-        width: $value;
-    }
-}
-
-// Creating Height breakpoints
-$mai-height-breakpoints: (
-    h-1: 1rem,
-    h-2: 2rem,
-    h-3: 4rem,
-    h-4: 8rem,
-    h-5: 16rem,
-    h-6: 32rem,
-    h-7: 48rem,
-    h-8: 64rem,
-    h-9: 96rem,
-);
-
-@each $key, $value in $mai-height-breakpoints {
-    .#{$key} {
-        height: $value;
-    }
-}
 
 // Creating Font Size breakpoints
 $mai-font-size-breakpoints:(
@@ -142,10 +43,6 @@ $justify-content-breakpoints:(
     }
 }
 
-.display-flex{
-    display: flex !important;
-}
-
 $text-style-breakpoints: (
     text-center: center,
     text-start: start,
@@ -161,8 +58,204 @@ $text-color-breakpoint: (
     text-warning: $warning-color,
     text-error: $error-color,
     text-light: $default-light-color,
-    text-dark: $default-dark-color
+    text-dark: $default-dark-color,
+
+    text-primary-100: $primary-color-100,
+    text-primary-200: $primary-color-200,
+    text-primary-300: $primary-color-300,
+    text-primary-400: $primary-color-400,
+    text-primary-500: $primary-color-500,
+    text-primary-600: $primary-color-600,
+    text-primary-700: $primary-color-700,
+
+    text-secondary-100: $secondary-color-100,
+    text-secondary-200: $secondary-color-200,
+    text-secondary-300: $secondary-color-300,
+    text-secondary-400: $secondary-color-400,
+    text-secondary-500: $secondary-color-500,
+    text-secondary-600: $secondary-color-600,
+    text-secondary-700: $secondary-color-700,
+
+    text-success-100: $success-color-100,
+    text-success-200: $success-color-200,
+    text-success-300: $success-color-300,
+    text-success-400: $success-color-400,
+    text-success-500: $success-color-500,
+    text-success-600: $success-color-600,
+    text-success-700: $success-color-700,
+
+    text-info-100: $info-color-100,
+    text-info-200: $info-color-200,
+    text-info-300: $info-color-300,
+    text-info-400: $info-color-400,
+    text-info-500: $info-color-500,
+    text-info-600: $info-color-600,
+    text-info-700: $info-color-700,
+
+    text-warning-100: $warning-color-100,
+    text-warning-200: $warning-color-200,
+    text-warning-300: $warning-color-300,
+    text-warning-400: $warning-color-400,
+    text-warning-500: $warning-color-500,
+    text-warning-600: $warning-color-600,
+    text-warning-700: $warning-color-700,
+
+    text-error-100: $error-color-100,
+    text-error-200: $error-color-200,
+    text-error-300: $error-color-300,
+    text-error-400: $error-color-400,
+    text-error-500: $error-color-500,
+    text-error-600: $error-color-600,
+    text-error-700: $error-color-700,
 );
+
+$text-hover: (
+    text-hover-primary: $primary-color,
+    text-hover-secondary: $secondary-color,
+    text-hover-success: $success-color,
+    text-hover-info: $info-color,
+    text-hover-warning: $warning-color,
+    text-hover-error: $error-color,
+    text-hover-light: $default-light-color,
+    text-hover-dark: $default-dark-color,
+
+    text-hover-primary-100: $primary-color-100,
+    text-hover-primary-200: $primary-color-200,
+    text-hover-primary-300: $primary-color-300,
+    text-hover-primary-400: $primary-color-400,
+    text-hover-primary-500: $primary-color-500,
+    text-hover-primary-600: $primary-color-600,
+    text-hover-primary-700: $primary-color-700,
+
+    text-hover-secondary-100: $secondary-color-100,
+    text-hover-secondary-200: $secondary-color-200,
+    text-hover-secondary-300: $secondary-color-300,
+    text-hover-secondary-400: $secondary-color-400,
+    text-hover-secondary-500: $secondary-color-500,
+    text-hover-secondary-600: $secondary-color-600,
+    text-hover-secondary-700: $secondary-color-700,
+
+    text-hover-success-100: $success-color-100,
+    text-hover-success-200: $success-color-200,
+    text-hover-success-300: $success-color-300,
+    text-hover-success-400: $success-color-400,
+    text-hover-success-500: $success-color-500,
+    text-hover-success-600: $success-color-600,
+    text-hover-success-700: $success-color-700,
+
+    text-hover-info-100: $info-color-100,
+    text-hover-info-200: $info-color-200,
+    text-hover-info-300: $info-color-300,
+    text-hover-info-400: $info-color-400,
+    text-hover-info-500: $info-color-500,
+    text-hover-info-600: $info-color-600,
+    text-hover-info-700: $info-color-700,
+
+    text-hover-warning-100: $warning-color-100,
+    text-hover-warning-200: $warning-color-200,
+    text-hover-warning-300: $warning-color-300,
+    text-hover-warning-400: $warning-color-400,
+    text-hover-warning-500: $warning-color-500,
+    text-hover-warning-600: $warning-color-600,
+    text-hover-warning-700: $warning-color-700,
+
+    text-hover-error-100: $error-color-100,
+    text-hover-error-200: $error-color-200,
+    text-hover-error-300: $error-color-300,
+    text-hover-error-400: $error-color-400,
+    text-hover-error-500: $error-color-500,
+    text-hover-error-600: $error-color-600,
+    text-hover-error-700: $error-color-700,
+);
+
+$text-active: (
+    text-active-primary: $primary-color,
+    text-active-secondary: $secondary-color,
+    text-active-success: $success-color,
+    text-active-info: $info-color,
+    text-active-warning: $warning-color,
+    text-active-error: $error-color,
+    text-active-light: $default-light-color,
+    text-active-dark: $default-dark-color,
+
+    text-active-primary-100: $primary-color-100,
+    text-active-primary-200: $primary-color-200,
+    text-active-primary-300: $primary-color-300,
+    text-active-primary-400: $primary-color-400,
+    text-active-primary-500: $primary-color-500,
+    text-active-primary-600: $primary-color-600,
+    text-active-primary-700: $primary-color-700,
+
+    text-active-secondary-100: $secondary-color-100,
+    text-active-secondary-200: $secondary-color-200,
+    text-active-secondary-300: $secondary-color-300,
+    text-active-secondary-400: $secondary-color-400,
+    text-active-secondary-500: $secondary-color-500,
+    text-active-secondary-600: $secondary-color-600,
+    text-active-secondary-700: $secondary-color-700,
+
+    text-active-success-100: $success-color-100,
+    text-active-success-200: $success-color-200,
+    text-active-success-300: $success-color-300,
+    text-active-success-400: $success-color-400,
+    text-active-success-500: $success-color-500,
+    text-active-success-600: $success-color-600,
+    text-active-success-700: $success-color-700,
+
+    text-active-info-100: $info-color-100,
+    text-active-info-200: $info-color-200,
+    text-active-info-300: $info-color-300,
+    text-active-info-400: $info-color-400,
+    text-active-info-500: $info-color-500,
+    text-active-info-600: $info-color-600,
+    text-active-info-700: $info-color-700,
+
+    text-active-warning-100: $warning-color-100,
+    text-active-warning-200: $warning-color-200,
+    text-active-warning-300: $warning-color-300,
+    text-active-warning-400: $warning-color-400,
+    text-active-warning-500: $warning-color-500,
+    text-active-warning-600: $warning-color-600,
+    text-active-warning-700: $warning-color-700,
+
+    text-active-error-100: $error-color-100,
+    text-active-error-200: $error-color-200,
+    text-active-error-300: $error-color-300,
+    text-active-error-400: $error-color-400,
+    text-active-error-500: $error-color-500,
+    text-active-error-600: $error-color-600,
+    text-active-error-700: $error-color-700,
+);
+
+@each $key, $value in $text-active {
+    .#{$key} {
+        &:active {
+            color: $value;
+        }
+    }
+}
+
+$text-style: (
+    text-style-italic: italic,
+    text-style-normal: normal,
+    text-style-oblique: oblique,
+    text-style-initial: initial,
+    text-style-inherit: inherit,
+);
+
+@each $key, $value in $text-style {
+    .#{$key} {
+        font-style: $value;
+    }
+}
+
+@each $key, $value in $text-hover {
+    .#{$key} {
+        &:hover {
+            color: $value;
+        }
+    }
+}
 
 @each $key, $value in $text-style-breakpoints {
     .#{$key} {
@@ -205,56 +298,135 @@ $text-color-breakpoint: (
     justify-content: space-between;
 }
 
-$bg-outlines: (
-    bg-outline-primary: $primary-color,
-    bg-outline-secondary: $secondary-color,
-    bg-outline-success: $success-color,
-    bg-outline-info: $info-color,
-    bg-outline-warning: $warning-color,
-    bg-outline-error: $error-color,
-    bg-outline-light: $default-light-color,
-    bg-outline-dark: $default-dark-color
+
+$float-breakpoints: (
+    float-start: left,
+    float-end: right,
+    float-none: none,
 );
 
-$bg-soft: (
-    bg-soft-primary: lighten($primary-color, 35%),
-    bg-soft-secondary: lighten($secondary-color, 35%),
-    bg-soft-success: lighten($success-color, 35%),
-    bg-soft-info: lighten($info-color, 35%),
-    bg-soft-warning: lighten($warning-color, 35%),
-    bg-soft-error: lighten($error-color, 35%),
-    bg-soft-light: $default-light-color,
-    bg-soft-dark: $default-dark-color
-);
-
-$bg-colors: (
-    bg-primary: #114277,
-    bg-secondary: #6a7075,
-    bg-success: #3b9f0e,
-    bg-info: #3595b2,
-    bg-warning: #6e5013,
-    bg-error: #d22525,
-    bg-light: $default-light-color,
-    bg-dark: $default-dark-color
-);
-
-@each $key, $value in $bg-outlines {
+@each $key, $value in $float-breakpoints {
     .#{$key} {
-        border: 1px solid $value !important;
-        color: $value;
-    }
-}
-@each $key, $value in $bg-colors {
-    .#{$key} {
-        background-color: lighten($value, 10%) !important;
-        color: $default-light-color;
-    }
-}
-@each $key, $value in $bg-soft {
-    .#{$key} {
-        background-color: $value !important;
-        color: $default-dark-color;
+        float: $value !important;
     }
 }
 
-@include define-margin-classes;
+$position-breakpoints: (
+    position-static: static,
+    position-relative: relative,
+    position-absolute: absolute,
+    position-fixed: fixed,
+    position-sticky: sticky,
+);
+
+@each $key, $value in $position-breakpoints {
+    .#{$key} {
+        position: $value !important;
+    }
+}
+
+
+$font-weight-breakpoints: (
+    fw-light: 300,
+    fw-normal: 400,
+    fw-bold: 700,
+);
+
+@each $key, $value in $font-weight-breakpoints {
+    .#{$key} {
+        font-weight: $value !important;
+    }
+}
+
+$box-sizing: (
+    box-border: border-box,
+    box-content: content-box,
+);
+
+@each $key, $value in $box-sizing {
+    .#{$key} {
+        box-sizing: $value !important;
+    }
+}
+
+
+$clear: (
+    clear-left: left,
+    clear-right: right,
+    clear-both: both,
+    clear-none: none,
+);
+
+@each $key, $value in $clear {
+    .#{$key} {
+        clear: $value !important;
+    }
+}
+
+$isolation: (
+    isolation-auto: auto,
+    isolation-isolate: isolate,
+);
+
+@each $key, $value in $isolation {
+    .#{$key} {
+        isolation: $value !important;
+    }
+}
+
+$object-fit: (
+    object-contain: contain,
+    object-cover: cover,
+    object-fill: fill,
+    object-none: none,
+    object-scale-down: scale-down,
+);
+
+@each $key, $value in $object-fit {
+    .#{$key} {
+        object-fit: $value !important;
+    }
+}
+
+$object-position: (
+    object-top: top,
+    object-bottom: bottom,
+    object-left: left,
+    object-right: right,
+    object-center: center,
+);
+
+@each $key, $value in $object-position {
+    .#{$key} {
+        object-position: $value !important;
+    }
+}
+
+$visibility: (
+    visible: visible,
+    invisible: hidden,
+);
+
+@each $key, $value in $visibility {
+    .#{$key} {
+        visibility: $value !important;
+    }
+}
+
+$z-index: (
+    z-0: 0,
+    z-1: 10,
+    z-2: 20,
+    z-3: 30,
+    z-4: 40,
+    z-5: 50,
+    z-auto: auto,
+);
+
+@each $key, $value in $z-index {
+    .#{$key} {
+        z-index: $value !important;
+    }
+}
+
+

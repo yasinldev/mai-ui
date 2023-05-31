@@ -1,10 +1,8 @@
 /*
-    Anchor -> Navigation
+    Scroll Spy -> Navigation
     ----------------------
     developed by @yasinldev
 */
-
-@import "./../base/_variables.scss";
 
 $define-width: 120px;
 
@@ -18,14 +16,14 @@ $define-width: 120px;
     font-weight: normal;
 
     .scroll-spy-item {
-        padding: $padding-xs;
-        margin-right: $margin-xs;
-        border-left: 2px solid #efefef;
+        padding: calc($padding-xs + 4px);
+        margin-right: $margin-md;
+        border-left: 2px solid lighten($secondary-color, 20%);
     }
 
     .scroll-spy-active {
-        @extend .scroll-spy-item;
-        border-left: 2px solid $primary-color !important;
+        font-weight: $font-weight-bold;
         color: $primary-color;
+        border-left: 2px solid $primary-color;
     }
 }
