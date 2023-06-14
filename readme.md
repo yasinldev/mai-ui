@@ -23,7 +23,7 @@ To customize the theme, simply edit the $primary-color and other variables in th
 ## Using the components
 Mai UI provides a set of pre-built components that you can use in your project. To use a component, simply include the corresponding HTML and CSS in your project. For example, to use a button, you can include the following HTML:
 ```html
-<button class="mai-btn color-primary">Button</button>
+<button class="mai-btn-default btn-primary">Button</button>
 ```
 And include the CSS:
 ```css
